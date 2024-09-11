@@ -1,0 +1,9 @@
+footer{
+ width: 100vw;
+
+ display: flex;
+ justify-content: end;
+
+ position: absolute;
+ bottom: 0;
+}

@@ -1,0 +1,24 @@
+#imagem_big{
+    position: absolute;
+    top: 35vh;
+    left: 15vw;
+    width: 30vw;
+    height: 30vh;
+}
+.texto{
+position: absolute;
+top: 35vh;
+left: 50vw;
+display: flex;
+flex-direction: column;
+text-align: left;
+}
+#primeiro_nome{
+    font-size: 5vh;
+}
+#segundo_nome{
+    font-size: 4vh;
+}
+.texto h1{
+    margin: 0;
+}
