@@ -1,12 +1,7 @@
 header {
     width: 100vw;
-<<<<<<< Updated upstream
     height: 13vh;
     background-color: black;
-=======
-    height: 10vh;
-    background-color: rgb(100, 100, 100);
->>>>>>> Stashed changes
 
     position: fixed;
     display: flex;
@@ -60,16 +55,22 @@ header div {
 }
 
 @media (max-width: 480px) {
-    header{
+    header {
         height: 13vh;
     }
+
     .textos_botoes {
         display: none;
     }
-    #imagem_icone {
+
+    #imagem_logo {
         width: 10vw;
         height: 10vh;
         border-radius: 5vw;
         border: none;
+    }
+
+    #logo_profissao h3 {
+        font-size: 5vw;
     }
 }

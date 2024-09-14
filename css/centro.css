@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 section {
     width: 100vw;
     height: 94vh;
@@ -8,15 +7,11 @@ section {
 #imagem_big {
     width: 30vw;
     height: 30vh;
-=======
-#imagem_big {
->>>>>>> Stashed changes
     position: absolute;
     top: 35vh;
     left: 15vw;
 }
 
-<<<<<<< Updated upstream
 #imagem_grande {
     border-radius: 5vw;
     border: rgb(255, 100, 0);
@@ -32,17 +27,6 @@ section {
     width: 20vw;
 }
 
-=======
-.texto {
-    position: absolute;
-    top: 35vh;
-    left: 50vw;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
->>>>>>> Stashed changes
 #primeiro_nome {
     font-size: 5vh;
     font-weight: 900;
@@ -56,41 +40,18 @@ section {
 .texto h1 {
     margin: 0;
 }
+
 @media(max-width: 480px) {
-    section {
-        height: 83vh;
-    }
     #imagem_big {
         width: 40vw;
         height: 20vh;
         position: absolute;
-        top: 20vh;
+        top: 15vh;
         left: 30vw;
     }
 
     .texto {
-        position: absolute;
-        top: 35vh;
-        left: 50vw;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
+        left: 25vw;
+        width: 60vw;
     }
-    #primeiro_nome {
-        position: absolute;
-        top: 20vh;
-        left: 30vw;
-    }
-    #segundo_nome {
-        position: absolute;
-        top: 30vh;
-        left: 30vw;
-    }
-    #paragrafo_um{
-        position: absolute;
-        top: 50vh;
-        left: 30vw;
-    }
-        
-  
 }
