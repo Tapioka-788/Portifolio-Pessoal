@@ -1,5 +1,6 @@
 footer {
     width: 100vw;
+<<<<<<< Updated upstream
     height: 6vh;
     background-color: rgb(0, 0, 0);
 
@@ -59,4 +60,12 @@ footer div {
     #github_textos {
         display: none;
     }
+=======
+
+    display: flex;
+    justify-content: end;
+
+    position: absolute;
+    bottom: 0;
+>>>>>>> Stashed changes
 }

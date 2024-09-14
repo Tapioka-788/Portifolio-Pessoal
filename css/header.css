@@ -1,7 +1,12 @@
 header {
     width: 100vw;
+<<<<<<< Updated upstream
     height: 13vh;
     background-color: black;
+=======
+    height: 10vh;
+    background-color: rgb(100, 100, 100);
+>>>>>>> Stashed changes
 
     position: fixed;
     display: flex;

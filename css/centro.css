@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 section {
     width: 100vw;
     height: 94vh;
@@ -7,11 +8,15 @@ section {
 #imagem_big {
     width: 30vw;
     height: 30vh;
+=======
+#imagem_big {
+>>>>>>> Stashed changes
     position: absolute;
     top: 35vh;
     left: 15vw;
 }
 
+<<<<<<< Updated upstream
 #imagem_grande {
     border-radius: 5vw;
     border: rgb(255, 100, 0);
@@ -27,6 +32,17 @@ section {
     width: 20vw;
 }
 
+=======
+.texto {
+    position: absolute;
+    top: 35vh;
+    left: 50vw;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+>>>>>>> Stashed changes
 #primeiro_nome {
     font-size: 5vh;
     font-weight: 900;
