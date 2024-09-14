@@ -42,16 +42,27 @@ section {
 }
 
 @media(max-width: 480px) {
+    #meio_tela{
+        width: 60vw;
+        height: 70vh;
+        background-color: blue;
+    }
     #imagem_big {
-        width: 40vw;
+        width: 47vw;
         height: 20vh;
         position: absolute;
-        top: 15vh;
+        top: 20vh;
         left: 30vw;
     }
 
     .texto {
+        top: 40vh;
         left: 25vw;
         width: 60vw;
     }
+
+    #segundo_nome {
+        margin: 0 9vw;
+    }
+
 }

@@ -64,13 +64,11 @@ header div {
     }
 
     #imagem_logo {
-        width: 10vw;
-        height: 10vh;
-        border-radius: 5vw;
-        border: none;
+        display: none;
     }
 
     #logo_profissao h3 {
         font-size: 5vw;
+        margin: 0 2vw;
     }
 }
