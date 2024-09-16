@@ -4,6 +4,11 @@ section {
     background-color: rgb(100, 100, 100);
 }
 
+iframe {
+    position: absolute;
+    top: 30vh;
+}
+
 #imagem_big {
     width: 30vw;
     height: 30vh;
@@ -24,57 +29,64 @@ section {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 20vw;
+    width: 45vw;
 }
 
 #primeiro_nome {
-    font-size: 5vh;
+    font-size: 10vh;
     font-weight: 900;
 }
 
 #segundo_nome {
-    font-size: 4vh;
+    font-size: 8vh;
     font-weight: 600;
+}
+
+section p{
+    font-size: 5vh;
 }
 
 .texto h1 {
     margin: 0;
 }
+
 @media(max-width: 480px) {
-    section {
-        height: 83vh;
-    }
     #imagem_big {
-        width: 40vw;
-        height: 20vh;
+        width: 60vw;
+        height: 25vh;
         position: absolute;
         top: 20vh;
-        left: 30vw;
+        left: 20vw;
     }
 
     .texto {
         position: absolute;
         top: 35vh;
-        left: 50vw;
+        left: 2vw;
         display: flex;
         flex-direction: column;
         text-align: left;
+        width: 70vw;
     }
+
     #primeiro_nome {
         position: absolute;
-        top: 20vh;
-        left: 30vw;
+        top: 10vh;
+        left: 18vw;
     }
+
     #segundo_nome {
         position: absolute;
-        top: 30vh;
-        left: 30vw;
+        top: 16vh;
+        left: 26vw;
     }
-    #paragrafo_um{
+
+    #paragrafo_um {
         position: absolute;
-        top: 50vh;
-        left: 30vw;
+        top: 20vh;
+        left: 24vw;
+
     }
-        
-  
+
+
 }

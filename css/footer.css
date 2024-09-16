@@ -29,34 +29,11 @@ footer div {
 }
 
 @media (max-width: 480px) {
-    footer {
-
-        height: 6vh;
-
-        display: flex;
-        justify-content: start;
-    }
-
-    footer div {
-        position: absolute;
-        bottom: 1vh;
-    }
     #botao_github {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    
-        width: 6vw;
-        height: 4vh;
-        background-color: rgb(255, 100, 0);
-        border-radius: 5vw;
-        border: none;
-    }    
-
-    .textos_botoes {
-        display: none;
+        width: 7vw;
     }
-    #github_textos {
+
+    footer h3 {
         display: none;
     }
 }

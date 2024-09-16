@@ -1,11 +1,15 @@
 @import url(./header.css);
 @import url(./centro.css);
 @import url(./footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Warang+Citi&family=Orbitron:wght@400..900&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Pacifico&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: "East Sea Dokdo";
 }
 
 img {
@@ -18,5 +22,9 @@ img {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+    }
+
+    .textos_botoes {
+        display: none;
     }
 }
