@@ -51,15 +51,27 @@ section p{
 }
 
 @media(max-width: 480px) {
+<<<<<<< HEAD
     #imagem_big {
         width: 60vw;
         height: 25vh;
+=======
+    #meio_tela{
+        width: 60vw;
+        height: 70vh;
+        background-color: blue;
+    }
+    #imagem_big {
+        width: 47vw;
+        height: 20vh;
+>>>>>>> f3d895b5dca177a028ee627b71ee6027541e0442
         position: absolute;
         top: 20vh;
         left: 20vw;
     }
 
     .texto {
+<<<<<<< HEAD
         position: absolute;
         top: 35vh;
         left: 2vw;
@@ -89,4 +101,15 @@ section p{
     }
 
 
+=======
+        top: 40vh;
+        left: 25vw;
+        width: 60vw;
+    }
+
+    #segundo_nome {
+        margin: 0 9vw;
+    }
+
+>>>>>>> f3d895b5dca177a028ee627b71ee6027541e0442
 }

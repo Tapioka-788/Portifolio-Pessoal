@@ -59,6 +59,7 @@ header div {
         height: 13vh;
     }
 
+<<<<<<< HEAD
     header img {
         width: 20vw;
     }
@@ -69,5 +70,18 @@ header div {
 
     .btn {
         width: 10vw;
+=======
+    .textos_botoes {
+        display: none;
+    }
+
+    #imagem_logo {
+        display: none;
+    }
+
+    #logo_profissao h3 {
+        font-size: 5vw;
+        margin: 0 2vw;
+>>>>>>> f3d895b5dca177a028ee627b71ee6027541e0442
     }
 }

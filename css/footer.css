@@ -29,6 +29,7 @@ footer div {
 }
 
 @media (max-width: 480px) {
+<<<<<<< HEAD
     #botao_github {
         width: 7vw;
     }
@@ -36,4 +37,15 @@ footer div {
     footer h3 {
         display: none;
     }
+=======
+   
+#github_texto {
+    display: none;
+} 
+#botao_github {
+    width: 10vw;
+    margin: 0 2vw;
+}
+
+>>>>>>> f3d895b5dca177a028ee627b71ee6027541e0442
 }
