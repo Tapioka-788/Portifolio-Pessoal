@@ -16,12 +16,21 @@ footer div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
 
     width: 6vw;
     height: 4vh;
     background-color: rgb(255, 100, 0);
     border-radius: 5vw;
     border: none;
+        
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+}
+ 
+#botao_github:hover{
+    width: 8vw;
 }
 
 #github_texto {
@@ -35,5 +44,9 @@ footer div {
 
     footer h3 {
         display: none;
+    }
+    footer i{
+        position: absolute;
+        right: 1vw;
     }
 }

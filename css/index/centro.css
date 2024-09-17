@@ -14,12 +14,14 @@ iframe {
     height: 30vh;
     position: absolute;
     top: 35vh;
-    left: 15vw;
+    left: 13vw;
+    animation: teste 8s infinite;
 }
 
 #imagem_grande {
     border-radius: 5vw;
     border: rgb(255, 100, 0);
+
 }
 
 .texto {
@@ -32,6 +34,23 @@ iframe {
     width: 45vw;
 }
 
+@keyframes teste {
+    0% {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    50% {
+        width: 35vw;
+        height: 35vh;
+    }
+
+    100% {
+        width: 30vw;
+        height: 30vh;
+    }
+}
+
 #primeiro_nome {
     font-size: 10vh;
     font-weight: 900;
@@ -42,12 +61,27 @@ iframe {
     font-weight: 600;
 }
 
-section p{
+section p {
     font-size: 5vh;
 }
 
 .texto h1 {
     margin: 0;
+}
+#carro{
+    position: absolute;
+    bottom: 4.7vh;
+    width: 5vw;
+    height: 5vh;
+    animation: carro 8s infinite;
+}
+@keyframes carro{
+    0%{
+        left: -5vw;
+    }
+    100%{
+        left: 100vw;
+    }
 }
 
 @media(max-width: 480px) {
@@ -56,36 +90,39 @@ section p{
         height: 25vh;
         position: absolute;
         top: 20vh;
-        left: 20vw;
+        left: 25vw;
+        animation: none;
     }
 
     .texto {
         position: absolute;
         top: 35vh;
-        left: 2vw;
+        left: 1.5vw;
         display: flex;
         flex-direction: column;
         text-align: left;
-        width: 70vw;
+        width: 85vw;
     }
 
     #primeiro_nome {
         position: absolute;
         top: 10vh;
-        left: 18vw;
+        left: 35vw;
+        font-size: 8vw;
     }
 
     #segundo_nome {
         position: absolute;
-        top: 16vh;
-        left: 26vw;
+        top: 14vh;
+        left: 38vw;
+        font-size: 8vw;
     }
 
     #paragrafo_um {
         position: absolute;
-        top: 20vh;
-        left: 24vw;
-
+        top: 18vh;
+        left: 25vw;
+        font-size: 5vw;
     }
 
 
