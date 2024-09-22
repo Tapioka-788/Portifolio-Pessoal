@@ -9,12 +9,54 @@ section {
     left: 10vw;
     background-color: rgb(255, 145, 0);
     width: 20vw;
-    height: 30vh;
+    height: 32.5vh;
     border-radius: 2vw;
 }
+
 .botoaos{
-    border-radius: 2vw;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin: 2vh 2.5vw;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 15vw;
+    height: 5vh;
+    background-color: brown;
+    border-radius: 2vw;
+}
+
+#linha{
+    width: 40;
+    color: black;
+    background-color: black;
+    height: 0.01vh;
+}
+
+#g_botao{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#meta_botao{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#a_botao{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#criar_conta{
+    display: flex;
+    flex-direction: row;
     text-align: center;
 }
