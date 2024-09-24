@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio do Felipetto </title>
-    <link rel="stylesheet" href="../css/login/login.css">
+    <link rel="stylesheet" href="../css/index/index.css">
+  <script src="../../controller/index.js" defer></script>
     <script src="https://kit.fontawesome.com/a451098362.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,48 +20,43 @@
             <h3 id="hierarquia"> Aluno do brayam</h3>
         </div>
         <div id="botoes">
-            <button class="btn" id="botao_home">
+            <button class="btn" id="botao_home" onclick="window.location.href='./index.html'">
                 <h3 class="textos_botoes" id="home_botao">Home</h3>
                 <i class="fa-solid fa-house fa-xl" style="color: #ffffff;"></i>
             </button>
-            <button class="btn" id="botao_formacao">
+            <button class="btn" id="botao_formacao" onclick="window.location.href='./formacao.html'">
                 <h3 class="textos_botoes" id="formacao_botao">Formacao</h3>
                 <i class="fa-solid fa-graduation-cap fa-xl" style="color: #ffffff;"></i>
             </button>
-            <Button class="btn" id="botao_projetos">
+            <Button class="btn" id="botao_projetos" onclick="window.location.href='./projetos.html'">
                 <h3 class="textos_botoes" id="projetos_botao">Projetos</h3>
                 <i class="fa-solid fa-folder-open fa-xl" style="color: #ffffff;"></i>
             </Button>
-            <Button class="btn" id="botao_login" onclick="window.location.href='index.html'">
-                <h3 class="textos_botoes" id="login_botao">Voltar</h3>
-                <i class="fa-solid fa-circle-left" style="color: #ffffff;"></i>
+            <Button class="btn" id="botao_login" onclick="window.location.href='login.html'">
+                <h3 class="textos_botoes" id="login_botao">Login</h3>
+                <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
             </Button>
         </div>
     </header>
     <section>
-        <div id="login_imagem"> <img src="">
-        </div>
-        <div id="botoes_login">
-            <div class="botoaos" id="botao_google">
-                <h3 class="textos_botoes" id="projetos_botao">Projetos</h3>
-                <i class="fa-solid fa-folder-open fa-xl" style="color: #ffffff;"></i>
+        <div id="meio_tela">
+            <div id="imagem_big"> <img id="imagem_grande"
+                    src="https://pipocanamadrugada.com.br/site/wp-content/uploads/2022/12/Gato-de-Botas-2-capa-725x375.jpg">
             </div>
-            <div class="botoaos" id="botao_apple">
-                <h3 class="textos_botoes" id="projetos_botao">Projetos</h3>
-                <i class="fa-solid fa-folder-open fa-xl" style="color: #ffffff;"></i>
+            <div class="texto" id="infos_nomes">
+                <h1 class="blur_h1" id="primeiro_nome">GUILHERME</h1>
+                <h1 class="blur_h1" id="segundo_nome">FELIPETTO</h1>
+                <p id="paragrafo_um">Aluno do poderoso chef ainholini formado em piadas e zoeira desde
+                    2008, sou socio do Ze
+                    bonitinho em sua empresa que ele copiou a nossa ideia e vai nos contratar para sua empresa</p>
             </div>
-            <div class="botoaos" id="botao_facebook">
-                <h3 class="textos_botoes" id="projetos_botao">Projetos</h3>
-                <i class="fa-solid fa-folder-open fa-xl" style="color: #ffffff;"></i>
-            </div>
-            <div class="botoaos" id="botao_facebook">
-                <h3 class="textos_botoes" id="projetos_botao">Projetos</h3>
-                <i class="fa-solid fa-folder-open fa-xl" style="color: #ffffff;"></i>
+            <div> <img id="carro"
+                    src="https://th.bing.com/th/id/R.974fe0a8749dc3c5202104ee53453f3f?rik=0B4n7PoRjxMoUA&pid=ImgRaw&r=0">
             </div>
         </div>
     </section>
-    <footer>
-        <div>
+    <footer id="footer">
+        <div id="gitzinho">
             <button id="botao_github">
                 <h3 id="github_texto">GitHub</h3>
                 <i class="fa-brands fa-github fa-2xl" style="color: #ffffff;"></i>

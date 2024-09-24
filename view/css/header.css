@@ -8,6 +8,9 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    position: absolute;
+    top: 0vh;
 }
 
 #botao_home {
@@ -41,6 +44,8 @@ header {
 #imagem_icone {
     border-radius: 5vw;
     border: none;
+    width: 7vw;
+    height: 7vh;
 }
 
 #hierarquia {

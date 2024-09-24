@@ -1,0 +1,67 @@
+section {
+    width: 100vw;
+    height: 94vh;
+    background-color: rgb(100, 100, 100);
+}
+
+#banners {
+    width: 400vw;
+    height: 35vh;
+
+    position: absolute;
+    top: 25vh;
+    left: 0vw;
+
+    display: flex;
+    flex-direction: row;}
+
+.banner{
+    width: 90vw;
+    height: 35vh;
+    margin: 0 5vw;
+    border-radius: 2vw;
+}
+
+#banner_0{
+    background-color: rgb(0, 0, 255);
+}
+
+#banner_1{
+    background-color: rgb(255, 0, 0);
+}
+
+#banner_2{
+    background-color: rgb(0, 255, 0);
+}
+
+#banner_3{
+    background-color: rgb(255, 100, 0);
+}
+
+#botoes_banners {
+    width: 16vw;
+    height: 5vh;
+
+    position: absolute;
+    left: 42vw;
+    top: 52vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn_banner {
+    width: 2.5vw;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn_banner:hover{
+    cursor: pointer;
+    width: 3vw;
+    height: 6vh;
+    border: solid 0.2vw  black;
+}

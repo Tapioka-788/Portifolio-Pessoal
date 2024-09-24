@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio do Felipetto </title>
+    <link rel="stylesheet" href="../css/projetos/projetos.css">
+    <script src="https://kit.fontawesome.com/a451098362.js" crossorigin="anonymous"></script>
+    <script type="module" src="./../../controller/projetos/projetos.js" defer></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <header>
+        <div id="logo_profissao">
+            <div id="imagem_logo"> <img id="imagem_icone"
+                    src="https://pipocanamadrugada.com.br/site/wp-content/uploads/2022/12/Gato-de-Botas-2-capa-725x375.jpg">
+            </div>
+            <h3 id="hierarquia"> Aluno do brayam</h3>
+        </div>
+        <div id="botoes">
+            <button class="btn" id="botao_home" onclick="window.location.href='./index.html'">
+                <h3 class="textos_botoes" id="home_botao">Home</h3>
+                <i class="fa-solid fa-house fa-xl" style="color: #ffffff;"></i>
+            </button>
+            <button class="btn" id="botao_formacao" onclick="window.location.href='./formacao.html'">
+                <h3 class="textos_botoes" id="formacao_botao">Formacao</h3>
+                <i class="fa-solid fa-graduation-cap fa-xl" style="color: #ffffff;"></i>
+            </button>
+            <Button class="btn" id="botao_projetos" onclick="window.location.href='./projetos.html'">
+                <h3 class="textos_botoes" id="projetos_botao">Projetos</h3>
+                <i class="fa-solid fa-folder-open fa-xl" style="color: #ffffff;"></i>
+            </Button>
+            <Button class="btn" id="botao_login" onclick="window.location.href='login.html'">
+                <h3 class="textos_botoes" id="login_botao">Login</h3>
+                <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+            </Button>
+        </div>
+    </header>
+    <section>
+        <nav id="banners">
+            <div class="banner" id="banner_0"></div>
+            <div class="banner" id="banner_1"></div>
+            <div class="banner" id="banner_2"></div>
+            <div class="banner" id="banner_3"></div>
+        </nav>
+        <nav id="botoes_banners">
+            <div class="btn_banner" onclick="trocarBanner(0)"></div>
+            <div class="btn_banner" onclick="trocarBanner(1)"></div>
+            <div class="btn_banner" onclick="trocarBanner(2)"></div>
+            <div class="btn_banner" onclick="trocarBanner(3)"></div>
+        </nav>
+    </section>
+    <footer id="footer">
+        <div id="gitzinho">
+            <button id="botao_github">
+                <h3 id="github_texto">GitHub</h3>
+                <i class="fa-brands fa-github fa-2xl" style="color: #ffffff;"></i>
+            </button>
+        </div>
+    </footer>
+</body>
+
+</html>
