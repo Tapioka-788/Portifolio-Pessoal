@@ -12,6 +12,13 @@ footer div {
     bottom: 1vh;
 }
 
+#email{
+    position: absolute;
+    left: 1vw;
+    bottom: 0.001vh;
+    color: white;
+}
+
 #botao_github {
     display: flex;
     flex-direction: row;
