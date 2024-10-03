@@ -1,5 +1,45 @@
 section {
+    margin: 13vh 0 0;
     width: 100vw;
-    height: 94vh;
+    height: 81vh;
     background-color: rgb(100, 100, 100);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cartoes{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw ;
+}
+
+/* Estilos do cartão */
+.cartao_vaga {
+    width:15vw;
+    height: 27.5vh;
+    border-radius: 2vw;
+    border: solid 0.3vw #011126;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Estilos do rodapé */
+.rodape_card {
+    width: 100%;
+    text-align: center;
+    padding: 1vh;
+    background-color: #011126;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Estilos dentro do cartão */
+.ct_font {
+    font-size: 2vw;
+    margin: 0;
 }
