@@ -1,0 +1,107 @@
+section {
+    width: 100vw;
+    height: 81vh;
+
+    margin-top: 13vh;
+
+    background-color: rgb(100, 100, 100);
+
+    align-items: center;
+    align-content: center;
+}
+
+/* Informacaos */
+
+#infos {
+    width: 90vw;
+    height: 50vh;
+
+    margin: 5vw 15.5vh;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Foto */
+
+#imagem_grande {
+    width: 25vw;
+    height: 25vh;
+
+    animation: teste 8s infinite;
+
+    border-radius: 2vw;
+    border: solid 0.2vw rgb(255, 100, 0);
+}
+
+/* Foto Animada */
+
+@keyframes teste {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Texto */
+
+#infos_nomes {
+    width: 40vw;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#nome_sobrenome {
+    width: 30vw;
+
+    margin: 0 5vw;
+
+    display: flex;
+    text-align: center;
+}
+
+#nome_sobrenome h1 {
+    font-size: 7vh;
+    margin: 0 1vw; 
+}
+
+#segundo_nome{
+    color: rgb(255, 100, 0);
+}
+
+/* Paragrafo */
+
+#infos_nomes p {
+    font-size: 4vh;
+}
+
+/* Carro */
+
+#carro {
+    position: absolute;
+    bottom: 4.7vh;
+    width: 5vw;
+    height: 5vh;
+    animation: carro 8s infinite;
+}
+
+/* Carro Animado */
+
+@keyframes carro {
+    0% {
+        left: -5vw;
+    }
+
+    100% {
+        left: 100vw;
+    }
+}
