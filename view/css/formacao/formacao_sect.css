@@ -1,0 +1,70 @@
+section {
+    width: 100vw;
+    height: 81vh;
+
+    margin-top: 13vh;
+
+    background-color: rgb(100, 100, 100);
+}
+
+/* Estetica dos banners */
+
+#banners{
+    height: 30vh;
+
+    /* background-color: brown; */
+
+    position: absolute;
+    top: 30vh;
+    left: 0;
+
+    display: flex;
+
+    z-index: 1;
+}
+
+.banner{
+    width: 70vw;
+    height: 25vh;
+    margin: 2.5vh 15vw;
+
+    border-radius: 2vw;
+
+    z-index: 2;
+}
+
+/* botoes para trocar banner */
+
+#btn_banners{
+    width: 20vw;
+    height: 20vh;
+
+    position: absolute;
+    top: 60vh;
+    left: 40vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn_banner{
+    width: 5vh;
+    height: 5vh;
+
+    border-radius: 50%;
+
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* botoes hover */
+
+.btn_banner:hover{
+    transform: scale(1.1);
+
+    cursor: pointer;
+}
