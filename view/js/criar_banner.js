@@ -114,6 +114,19 @@ export function criarBanner() {
         botoes.appendChild(btn);
 
     }
+
+    let adicionar = document.createElement('button')
+    adicionar.id = 'adicionar'
+    adicionar.onclick = () => mostraTelAdd();
+
+    let iAdd = document.createElement('i')
+    iAdd.classList = 'fa-solid fa-plus fa-2xl'
+    iAdd.color = 'rgb(0, 0, 0)'
+
+    adicionar.appendChild(iAdd)
+
+    botoes.appendChild(adicionar)
+
     secction.appendChild(botoes);
     secction.appendChild(bannersContainer);
 }

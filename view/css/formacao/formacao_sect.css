@@ -5,6 +5,8 @@ section {
     margin-top: 13vh;
 
     background-color: rgb(100, 100, 100);
+
+    z-index: 1;
 }
 
 /* Estetica dos banners */
@@ -57,7 +59,7 @@ section {
 
 /* caixa de foto */
 
-.caixa_foto{
+.caixa_foto {
     width: 30vw;
     height: 22vh;
 
@@ -73,7 +75,7 @@ section {
     justify-content: center;
 }
 
-.imagem{
+.imagem {
     width: 29vw;
     height: 19vh;
 
@@ -115,6 +117,115 @@ section {
 
 .btn_banner:hover {
     transform: scale(1.1);
+
+    cursor: pointer;
+}
+
+/* adicionar */
+
+#adicionar {
+    width: 5vh;
+    height: 5vh;
+
+    border-radius: 50%;
+
+    background-color: rgb(255, 255, 255);
+}
+
+/* adicionar hover */
+
+#adicionar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: ease-in-out 0.5s all;
+}
+
+#adicionar:hover i {
+    transform: rotate(180deg);
+
+    transition: ease-in-out 0.5s all;
+}
+
+/* Tela de Add banner */
+
+#tel_Add {
+    width: 100vw;
+    height: 81vh;
+
+    margin-top: 13vh;
+
+    background-color: rgba(200, 200, 200, 0.4);
+
+    position: absolute;
+    left: -100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+}
+
+/* box dos inputs */
+
+#box_Add {
+    width: 40vw;
+    height: 40vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    padding-top: 3vh;
+
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 2vw;
+}
+
+.escreva {
+    width: 30vw;
+    height: 3vh;
+
+    background-color: rgb(200, 200, 200);
+
+    margin: 0.5vh 0vw 1vh;
+
+    padding-left: 1vw;
+
+    border-radius: 1vw;
+    border: solid 0.1vw black;
+}
+
+.escreva:hover {
+    transform: scale(1.01);
+
+    cursor: pointer;
+}
+
+#btn_Add {
+    width: 40vw;
+    height: 10vh;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.add_Btn {
+    width: 10vw;
+    height: 5vh;
+
+
+    margin: 1.5vh 0vw 0vh;
+
+    border-radius: 3vw;
+
+    background-color: rgb(255, 100, 0);
+}
+
+.add_Btn:hover {
+    transform: scale(1.05);
 
     cursor: pointer;
 }
