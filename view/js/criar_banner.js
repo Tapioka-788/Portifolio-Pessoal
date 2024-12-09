@@ -4,45 +4,45 @@ const banners = [
 
     {
         imagem: '',
-        local: 'terra',
-        curso: 'cursA',
-        infos: 'bla bla bla',
+        local: 'Sesc Senac',
+        curso: 'Desenvolvedor WEB',
+        infos: 'Curso para desenvolvimento de sites web, com html, css, js, e biblioteca node.js',
         id: '0',
         nbtn:'1',
         cor: 'rgb(255,100,0)',
     },
     {
         imagem: '',
-        local: 'brasil',
-        curso: 'cursE',
-        infos: 'bla bla bla',
+        local: 'Cema',
+        curso: 'Ensino tecnico - Desenvolvimento de sistemas',
+        infos: 'Ensinho medio e ensino tecnico no curso de DS',
         id: '1',
         nbtn:'2',
         cor: 'rgb(0,100,255)',
     },
     {
         imagem: '',
-        local: 'parana',
-        curso: 'cursI',
-        infos: 'bla bla bla',
+        local: 'Rockfeller',
+        curso: 'Inglês',
+        infos: 'Curso de ingles fluente',
         id: '2',
         nbtn:'3',
         cor: 'rgb(255,255,0)',
     },
     {
         imagem: '',
-        local: 'sudoeste',
-        curso: 'cursO',
-        infos: 'bla bla bla',
+        local: 'Sesi',
+        curso: 'Manutencao para operadores de Maquinas',
+        infos: 'Curso para manutencao, fabricacao de pecas e manuzeamento de ferramentas e maquinas industriais',
         id: '3',
         nbtn:'4',
         cor: 'rgb(255,255,255)',
     },
     {
         imagem: '',
-        local: 'beltrao',
-        curso: 'cursU',
-        infos: 'bla bla bla',
+        local: 'Prepara Cursos',
+        curso: 'Curso de informatica',
+        infos: 'Curso de aprendizagem e manuzeamento de todas as ferramentas Microsft',
         id: '4',
         nbtn:'5',
         cor: 'rgb(0,255,100)',
@@ -80,10 +80,10 @@ export function criarBanner() {
         //textos
 
         let local = document.createElement('h1')
-        local.textContent = banners[i].local
+        local.textContent = 'Local: - ' + banners[i].local
 
         let curso = document.createElement('h1')
-        curso.textContent = banners[i].curso
+        curso.textContent = 'Curso: - ' + banners[i].curso
 
         let infos = document.createElement('h1')
         infos.textContent = banners[i].infos

@@ -7,6 +7,9 @@ section {
     background-color: rgb(100, 100, 100);
 
     z-index: 1;
+
+    font-family: "none";
+    font-size: 0.6vw;
 }
 
 /* Estetica dos banners */
@@ -36,6 +39,10 @@ section {
     justify-content: space-evenly;
 
     z-index: 2;
+}
+
+.banner:hover{
+    transform: scale(1.01);
 }
 
 /* caixa de texto */
