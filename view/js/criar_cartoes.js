@@ -16,11 +16,11 @@ export async function criarCartoes() {
         let cartao = document.createElement('div');
         cartao.className = 'card';
 
-        if (cartoes[i].estado === 'concluido') {
+        if (cartoes[i].estado === 'concluido' || cartoes[i].estado === 'ok' || cartoes[i].estado === 'Ok' || cartoes[i].estado === 'Concluido') {
             cartao.style.backgroundColor = 'green';
-        } if (cartoes[i].estado === 'andamento') {
+        } else if (cartoes[i].estado === 'andamento' || cartoes[i].estado === 'Em andamento' || cartoes[i].estado === 'Em progresso') {
             cartao.style.backgroundColor = 'yellow';
-        } if (cartoes[i].estado === 'inicio') {
+        } else if (cartoes[i].estado === 'inicio' || cartoes[i].estado === 'Começo') {
             cartao.style.backgroundColor = 'red';
         }
 
@@ -28,7 +28,7 @@ export async function criarCartoes() {
         boxInfos.className = 'boxInfos';
 
         let nome = document.createElement('h1');
-        nome.className = 'nome';
+        nome.className = 'nomeC';
         nome.textContent = 'Projeto: ' + cartoes[i].nome;
 
         let linguagem = document.createElement('h1');
