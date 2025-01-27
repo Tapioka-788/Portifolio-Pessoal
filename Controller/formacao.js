@@ -1,5 +1,5 @@
 import { trocarBanner } from "./trocarbanner.js";
-import { criarBanner } from "./../view/js/criar_banner.js"
+import { criarBanner } from "../view/js/criar_banner.js"
 
 import { escondeTelAdd } from "./telaAdd.js"
 import { mostraTelAdd } from "./telaAdd.js"

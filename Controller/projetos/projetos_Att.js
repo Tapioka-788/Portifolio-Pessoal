@@ -1,0 +1,34 @@
+import { atualizarCartao } from "./../Services/cartao_S.js";
+
+let telaAtt = document.getElementById('telaAtt')
+let id;
+
+export function escondeTelaAtt() {
+    telaAtt.style.right = '-100vw'
+}
+export function mostraTelaAtt(i) {
+    id = i
+    telaAtt.style.right = '1vw'
+}
+export function recolheDadosAtt() {
+    let nome = document.getElementById('nome');
+    let linguagem = document.getElementById('linguagem');
+    let estado = document.getElementById('estado');
+    let link = document.getElementById('link')
+    let img = document.getElementById('img')
+
+    if (nome.value === "", linguagem.value === '', estado === '', link.value === '', img.value === '') {
+        alert('Check se todos os campos estão preenchidos');
+    } else {
+
+        console.log(id, nome.value, linguagem.value, estado.value, link.value, img.value,);
+        atualizarCartao(id, nome.value, linguagem.value, estado.value, link.value, img.value,);
+        escondeTelaAtt();
+
+        nome.value = '';
+        linguagem.value = '';
+        estado.value = '';
+        link.value = '';
+        img.value = '';
+    }
+};

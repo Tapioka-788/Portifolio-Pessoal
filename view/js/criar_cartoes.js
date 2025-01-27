@@ -1,59 +1,22 @@
-let cartoes = [
-    {
-        nome: 'Portifolio Pessoal',
-        linguagem: 'Html; CSS; Js',
-        estado: 'ok',
-        link: 'https://github.com/Tapioka-788/Portifolio-Pessoal.git',
-        img: 'tche tche',
-    },
-    {
-        nome: 'Pokemon Gen3',
-        linguagem: 'Html; CSS; Js',
-        estado: 'andamento',
-        link: 'https://github.com/Tapioka-788/Pokemon-Gen3.git',
-        img: 'tcha tcha',
-    },
-    {
-        nome: 'Trash-Point',
-        linguagem: 'Html; CSS; Js',
-        estado: 'inicio',
-        link: 'https://github.com/Tapioka-788/trashPoint.git',
-        img: 'tche tche',
-    },
-    {
-        nome: 'K-entre-nos',
-        linguagem: 'Html; CSS; Js',
-        estado: 'ok',
-        link: 'https://github.com/BryamSenac/k_entre_nos.githttps://github.com/BryamSenac/k_entre_nos.git',
-        img: 'tcha tcha',
-    },
-    {
-        nome: 'Bridge-Works',
-        linguagem: 'Html; CSS; Js',
-        estado: 'inicio',
-        link: 'https://github.com/Tapioka-788/BridgeWorks.git',
-        img: 'tche tche',
-    },
-    {
-        nome: 'Backend Bridge-Works',
-        linguagem: 'Js; Node.js',
-        estado: 'andamento',
-        link: 'https://github.com/Tapioka-788/Backend-BridgeWorks.git',
-        img: 'tcha tcha',
-    },
-];
+import { mostraTelaCad } from "./../../Controller/projetos/projetos_Add.js"
+import { mostraTelaAtt } from "./../../Controller/projetos/projetos_Att.js";
+import { excluirCartoes } from "./../../Controller/Services/cartao_S.js";
+import { pegarCartoes } from "./../../Controller/Services/cartao_S.js";
+import { mostraTelaDel } from "./../../Controller/projetos/projetos_Del.js";
 
 export async function criarCartoes() {
-
     let secitionCartoes = document.getElementById('section');
     let pagina = document.getElementById('pagina');
     secitionCartoes.innerHTML = '';
+    pagina.innerHTML = '';
+
+    const cartoes = await pegarCartoes()
 
     for (let i = 0; i < cartoes.length; i++) {
         let cartao = document.createElement('div');
         cartao.className = 'card';
 
-        if (cartoes[i].estado === 'ok') {
+        if (cartoes[i].estado === 'concluido') {
             cartao.style.backgroundColor = 'green';
         } if (cartoes[i].estado === 'andamento') {
             cartao.style.backgroundColor = 'yellow';
@@ -61,7 +24,6 @@ export async function criarCartoes() {
             cartao.style.backgroundColor = 'red';
         }
 
-        // Criando a box para nome e linguagem
         let boxInfos = document.createElement('div');
         boxInfos.className = 'boxInfos';
 
@@ -73,12 +35,10 @@ export async function criarCartoes() {
         linguagem.className = 'linguagem';
         linguagem.textContent = 'Linguagem: ' + cartoes[i].linguagem;
 
-        // Criando a imagem
         let imagem = document.createElement('img');
         imagem.className = 'imagem';
         imagem.src = cartoes[i].img;
 
-        // Criando a box para o botão
         let boxBotao = document.createElement('div');
         boxBotao.className = 'botaoBox';
 
@@ -86,27 +46,55 @@ export async function criarCartoes() {
         link.className = 'link';
         link.textContent = 'Acesse Aqui';
 
-        // Adicionando evento ao botão
         link.addEventListener('click', () => {
             window.location.href = cartoes[i].link;
         });
 
-        // Adicionando nome e linguagem à box
+        let button = document.createElement('button')
+        button.id = 'lixeira'
+        button.addEventListener('click', ()=>{
+            excluirCartoes(cartoes[i].id);
+        });
+
+        let lixo = document.createElement('i')
+        lixo.classList.add('fa-solid')
+        lixo.classList.add('fa-trash')
+
+        let atualizarbutton = document.createElement('button')
+        atualizarbutton.id = 'lapis'
+        atualizarbutton.addEventListener('click', () => {
+            mostraTelaAtt(cartoes[i].id)
+        })
+
+        let caneta = document.createElement('i')
+        caneta.classList.add('fa-solid')
+        caneta.classList.add('fa-pen')
+
+        button.appendChild(lixo)
+        atualizarbutton.appendChild(caneta)
+
         boxInfos.appendChild(nome);
         boxInfos.appendChild(linguagem);
 
-        // Adicionando o botão à box
-        boxBotao.appendChild(link);
+        boxBotao.appendChild(button);
+        boxBotao.appendChild(link);  
+        boxBotao.appendChild(atualizarbutton);
 
-        // Adicionando as boxes e a imagem ao cartão
         cartao.appendChild(boxInfos);
-        cartao.appendChild(imagem); // Adicionando a imagem entre as boxes
+        cartao.appendChild(imagem);
         cartao.appendChild(boxBotao);
 
-        // Adicionando o cartão à página
         pagina.appendChild(cartao);
     }
+    let cartaoAdd = document.createElement('button')
+    cartaoAdd.id = 'cartao_add'
+    cartaoAdd.textContent = '+'
+
+    cartaoAdd.addEventListener('click', () => {
+        mostraTelaCad();
+    })
+    
+    pagina.appendChild(cartaoAdd);
+
     secitionCartoes.appendChild(pagina);
 }
-
-

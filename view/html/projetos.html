@@ -6,19 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio do Felipetto </title>
     <link rel="stylesheet" href="../css/projetos/projetos_link.css">
-    <script type="module" src="../../Controller/projetos.js" defer></script>
+    <script type="module" src="../../Controller/projetos/projetos.js" defer></script>
     <script src="https://kit.fontawesome.com/a451098362.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="background"></div>
 
-    <!-- Cabeçaljhop -->
-
     <header>
         <div id="logo_profissao">
 
-            <!-- Logo e Posicao Hierarquica -->
 
             <div id="imagem_logo"> 
                 <img id="imagem_icone"
@@ -26,8 +23,6 @@
             </div>
             <h3 id="hierarquia"> Programador Web</h3>
         </div>
-        
-        <!-- Botões -->
 
         <div id="botoes">
             <button class="btn" id="botao_home" onclick="window.location.href='./index.html'">
@@ -48,19 +43,57 @@
         </div>
     </header>
 
-    <!-- Seção -->
-
     <section id="section">
         <div id="pagina">
-            <!-- TELA DE CARTOES CRIADOS COM JS -->
+          
 
         </div>
     </section>
 
-    <!-- Rodape -->
+    <section id="telaCadastro">
+        <div id="inputs_cad">
+            <h1 class="Putos"> Cadastrar um Projeto</h1>
+
+            <input class="Putos" id="nomeAdd" type="text" placeholder="Nome do Projeto">
+            <input class="Putos" id="linguagemAdd" type="text" placeholder="Linguagens">
+            <input class="Putos" id="estadoAdd" type="text" placeholder="Fase">
+            <input class="Putos" id="linkAdd" type="text" placeholder="Link do projeto">
+            <input class="Putos" id="imgAdd" type="text" placeholder="Link da imagem">
+
+            <div id="buttons_telaCad">
+                <button class="cadbuts" onclick="recolheDados()">Salvar</button>
+                <button class="cadbuts" onclick="escondeTelaCad()">Cancelar</button>
+            </div>
+        </div>
+    </section>
+    <section id="telaAtt">
+        <div id="inputs_att">
+            <h1 class="PutosAtt">Atualizar</h1>
+
+            <input class="PutosAtt" id="nome" type="text" placeholder="Novo nome">
+            <input class="PutosAtt" id="linguagem" type="text" placeholder="Nova linguagem">
+            <input class="PutosAtt" id="estado" type="text" placeholder="Fase">
+            <input class="PutosAtt" id="link" type="text" placeholder="Novo Link">
+            <input class="PutosAtt" id="img" type="text" placeholder="Nova imagem">
+
+            <div id="buttons_telaatt">
+                <button class="attbuts" onclick="recolheDadosAtt()">Salvar</button>
+                <button class="attbuts" onclick="escondeTelaAtt()">Cancelar</button>
+            </div>
+        </div>
+    </section>
+    <section id="confirm_delete">
+        <div class="smallScreen">
+            <h1>Tem certeza que deseja excluir o cartão?</h1>
+            <div class="btns_confirm">
+                <button class="btn_confirm" id="btn_sim" onclick="recolheDadosDel()">SIM</button>
+                <button class="btn_confirm" id="btn_nao" onclick="escodeTelaDel()">NÃO</button>
+            </div>
+        </div>
+    </section>
 
     <footer>
-            <h2> Contato -- 46 99989-0765</h2>
+            <h2> Contato -- (46) 99989-0765</h2>
 
             <!-- Acesso ao GitHub -->
 
