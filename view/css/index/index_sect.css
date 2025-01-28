@@ -126,7 +126,7 @@ section {
 
     #infos {
         width: 00vw;
-        height: 00vh;
+        height: -20vh;
     
         display: flex;
         justify-content: space-evenly;
