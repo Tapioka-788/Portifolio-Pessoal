@@ -105,3 +105,70 @@ section {
         left: 100vw;
     }
 }
+
+@media screen and (max-width: 480px) {
+    section {
+        height: 80vh;
+        width: 100vw;
+
+        margin-top: 10vh;
+
+        background-color: rgb(100, 100, 100);
+    
+        align-items: center;
+        align-content: center;
+    }
+
+    #imagem_grande {
+        width: 0vw;
+        border: none;
+    }
+
+    #infos {
+        width: 00vw;
+        height: 00vh;
+    
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #infos_nomes {
+        width: 20vw;
+    
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #nome_sobrenome {
+        width: 30vw;
+    
+        margin: 0 5vw;
+    
+        display: flex;
+        text-align: center;
+    }
+    
+    #nome_sobrenome h1 {
+        font-size: 2vh;
+        margin: 0 1vw; 
+    }
+    
+    #segundo_nome{
+        color: rgb(255, 100, 0);
+    }
+    
+    /* Paragrafo */
+    
+    #infos_nomes p {
+        font-size: 2vh;
+    }
+
+    #carro{
+        position: absolute;
+        bottom: 0vh;
+        width: 0vw;
+        height: 0vh;
+        animation: carro 8s infinite;
+    }
+}

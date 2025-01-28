@@ -91,3 +91,26 @@ header div {
 
     transition: all 0.3s ease-in-out;
 }
+
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 10vh;
+        width: 100vw;
+    }
+
+    #imagem_logo {
+        width: 0vw;
+    }
+    .btn {
+        width: 8vw ;
+        height: 8vw ;
+    
+        background-color: rgb(255, 100, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .textos_botoes{
+        font-size: 0vh;
+    }
+}

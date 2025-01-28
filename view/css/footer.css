@@ -15,20 +15,17 @@ footer {
     z-index: 3;
 }
 
-/* Contato */
-
-footer h2{
-    color: rgb(255, 100, 0);
+footer h3{
+    font-size: 1.4vh;
+    color: rgb(255, 255, 255);
 }
 
-/* Botao do Github */
-
-#botao_github {
+.tpsCtts {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
-    width: 6vw;
+    width: 8vw;
     height: 4vh;
 
     margin-right: 4vw;
@@ -40,12 +37,27 @@ footer h2{
     border: none;
 }
 
-/* Botao do Github Hover */
-
-#botao_github:hover{
+.tpsCtts:hover{
     transform: scale(1.1);
     
     cursor: pointer;
     
     transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        height: 10vh;
+        width: 100vw;
+    }
+
+    footer h3{
+        font-size: 0vw;
+    }
+
+    .tpsCtts{
+        width: 8vw;
+        height: 8vw;
+    }
+
 }
