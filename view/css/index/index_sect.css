@@ -106,7 +106,7 @@ section {
     }
 }
 
-@media screen and (max-width: 480px), (max-height: 900px) {
+@media screen and (max-width: 480px), (max-height: 882px){
     section {
         height: 80vh;
         width: 100vw;
