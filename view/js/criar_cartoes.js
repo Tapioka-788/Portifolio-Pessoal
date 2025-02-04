@@ -16,11 +16,11 @@ export async function criarCartoes() {
         let cartao = document.createElement('div');
         cartao.className = 'card';
 
-        if (cartoes[i].estado === 'concluido' || cartoes[i].estado === 'ok' || cartoes[i].estado === 'Ok' || cartoes[i].estado === 'Concluido') {
+        if (cartoes[i].estado === 'Concluído') {
             cartao.style.backgroundColor = 'green';
-        } else if (cartoes[i].estado === 'andamento' || cartoes[i].estado === 'Em andamento' || cartoes[i].estado === 'Em progresso') {
+        } else if (cartoes[i].estado === 'Em Andamento') {
             cartao.style.backgroundColor = 'yellow';
-        } else if (cartoes[i].estado === 'inicio' || cartoes[i].estado === 'Começo') {
+        } else if (cartoes[i].estado === 'Iniciado') {
             cartao.style.backgroundColor = 'red';
         }
 

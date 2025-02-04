@@ -56,7 +56,13 @@
 
             <input class="Putos" id="nomeAdd" type="text" placeholder="Nome do Projeto">
             <input class="Putos" id="linguagemAdd" type="text" placeholder="Linguagens">
-            <input class="Putos" id="estadoAdd" type="text" placeholder="Fase">
+            <input class="Putos" id="estadoAdd" list="opcoesEstado" placeholder="Fase">
+
+            <datalist id="opcoesEstado">
+                <option value="Concluído"></option>
+                <option value="Em Andamento"></option>
+                <option value="Iniciado"></option>
+            </datalist>
             <input class="Putos" id="linkAdd" type="text" placeholder="Link do projeto">
             <input class="Putos" id="imgAdd" type="text" placeholder="Link da imagem">
 
@@ -72,7 +78,13 @@
 
             <input class="PutosAtt" id="nome" type="text" placeholder="Novo nome">
             <input class="PutosAtt" id="linguagem" type="text" placeholder="Nova linguagem">
-            <input class="PutosAtt" id="estado" type="text" placeholder="Fase">
+            <input class="PutosAtt" id="estado" list="opcoesEstado" placeholder="Fase">
+
+            <datalist id="opcoesEstado">
+                <option value="Concluído"></option>
+                <option value="Em Andamento"></option>
+                <option value="Iniciado"></option>s
+            </datalist>
             <input class="PutosAtt" id="link" type="text" placeholder="Novo Link">
             <input class="PutosAtt" id="img" type="text" placeholder="Nova imagem">
 

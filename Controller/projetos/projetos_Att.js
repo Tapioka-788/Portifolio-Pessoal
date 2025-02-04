@@ -1,10 +1,10 @@
 import { atualizarCartao } from "./../Services/cartao_S.js";
 
-let telaAtt = document.getElementById('telaAtt')
+let telaAtt = document.getElementById('telaAtt');
 let id;
 
 export function escondeTelaAtt() {
-    telaAtt.style.right = '-100vw'
+    telaAtt.style.right = '-100vw';
 }
 export function mostraTelaAtt(i) {
     id = i
@@ -14,15 +14,14 @@ export function recolheDadosAtt() {
     let nome = document.getElementById('nome');
     let linguagem = document.getElementById('linguagem');
     let estado = document.getElementById('estado');
-    let link = document.getElementById('link')
-    let img = document.getElementById('img')
+    let link = document.getElementById('link');
+    let img = document.getElementById('img');
 
-    if (nome.value === "", linguagem.value === '', estado === '', link.value === '', img.value === '') {
-        alert('Check se todos os campos estão preenchidos');
+    if (nome.value === '' || linguagem.value === '' || estado.value === '' || link.value === '' || img.value === '') {
+        alert('Verifique se todos os campos estão preenchidos');
     } else {
-
-        console.log(id, nome.value, linguagem.value, estado.value, link.value, img.value,);
-        atualizarCartao(id, nome.value, linguagem.value, estado.value, link.value, img.value,);
+        console.log(id, nome.value, linguagem.value, estado.value, link.value, img.value);
+        atualizarCartao(id, nome.value, linguagem.value, estado.value, link.value, img.value);
         escondeTelaAtt();
 
         nome.value = '';
@@ -31,4 +30,4 @@ export function recolheDadosAtt() {
         link.value = '';
         img.value = '';
     }
-};
+}
