@@ -18,6 +18,8 @@
     height: 2vh;
     border-radius: 1vw;
     padding: 0 1vw;
+
+    margin-top: -1vw;
 }
 
 #inputs_cad {
@@ -49,4 +51,16 @@
 .cadbuts:hover {
     transform: scale(1.1);
     background-color: rgb(242, 186, 87);
+}
+
+#recado{
+    width: 15vw;
+    height: 5vh;
+    border-radius: 2vw;
+    margin-bottom: -15vh;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
