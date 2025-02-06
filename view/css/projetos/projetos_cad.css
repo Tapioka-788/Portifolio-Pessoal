@@ -26,6 +26,9 @@
     width: 15vw;
     height: 25vh;
 
+    position: fixed;
+    top: 32.5vh;
+
     background-color: white;
     border-radius: 2vw;
 
