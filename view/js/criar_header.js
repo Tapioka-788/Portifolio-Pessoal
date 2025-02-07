@@ -3,8 +3,9 @@ import { pegarHeader } from "../../Controller/Services/header_S.js";
 export async function criarHeader() {
     let Sepheader = document.getElementById('header');
     let botoes = document.getElementById('botoes');
+    // Sepheader é separaracao header
+
     // Sepheader.innerHTML = '';
-    //esse codigo comentado permite que apareca a foto e a proficao tbm
     botoes.innerHTML = '';
 
     const header = await pegarHeader()

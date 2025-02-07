@@ -1,4 +1,5 @@
 import { criarHeader } from "./../../view/js/criar_header.js";
+import { logo } from "../../Model/header.js";
 
 export async function pegarHeader() {
    try {
@@ -17,4 +18,8 @@ export async function pegarHeader() {
    catch (e) {
       alert(e)
    }
+}
+
+export async function pegarLogo() {
+   return logo;
 }
