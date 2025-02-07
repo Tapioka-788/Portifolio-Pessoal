@@ -1,4 +1,4 @@
-import { pegarHeader } from "./../../Controller/Services/header_S.js";
+import { pegarHeader } from "../../Controller/Services/header_S.js";
 
 export async function criarHeader() {
     let Sepheader = document.getElementById('header');

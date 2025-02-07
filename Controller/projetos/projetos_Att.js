@@ -1,14 +1,19 @@
 import { atualizarCartao } from "./../Services/cartao_S.js";
+import { pegarCartoes } from "./../../Controller/Services/cartao_S.js";
 
 let telaAtt = document.getElementById('telaAtt');
 let id;
+
+const cartoes = pegarCartoes()
 
 export function escondeTelaAtt() {
     telaAtt.style.right = '-100vw';
 }
 export function mostraTelaAtt(i) {
-    id = i
+    id = i;
     telaAtt.style.right = '1vw'
+
+    console.log(id);
 }
 export function recolheDadosAtt() {
     let nome = document.getElementById('nome');
