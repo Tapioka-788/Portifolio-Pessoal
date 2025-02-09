@@ -38,7 +38,8 @@
     <section id="telaCadastro">
         <div id="inputs_cad">
             <h1 class="Putos"> Cadastrar um Projeto </h1>
-            <input class="Putos" id="nomeAdd" type="text" placeholder="Nome do Projeto">
+            <input class="Putos" id="nomeAdd" type="text" placeholder="Nome do Projeto" maxlength="30" required>
+            <p id="contador-nome" class="contador-limite">0/30</p>
             <input class="Putos" id="linguagemAdd" type="text" placeholder="Linguagens">
             <input class="Putos" id="estadoAdd" list="opcoesEstado" placeholder="Fase">
 
@@ -68,7 +69,7 @@
             <datalist id="opcoesEstado">
                 <option value="Concluído"></option>
                 <option value="Em Andamento"></option>
-                <option value="Iniciado"></option>s
+                <option value="Iniciado"></option>
             </datalist>
             <input class="PutosAtt" id="link" type="text" placeholder="Novo Link">
             <input class="PutosAtt" id="img" type="text" placeholder="Nova imagem">

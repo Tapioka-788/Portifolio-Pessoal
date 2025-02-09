@@ -11,6 +11,26 @@ export function escondeTelaAtt() {
 }
 export function mostraTelaAtt(i) {
     id = i;
+
+    fetch('https://back-end-portifolio-lime.vercel.app/cartoes')
+    .then((response) => response.json())
+    .then((data) => {
+        // Encontrar o cartão correspondente ao ID
+        const cartao = data.cartoes.find(c => c.id === id);
+
+        // Preencher os campos com os dados do cartão encontrado
+        if (cartao) {
+            document.getElementById('nome').value = cartao.nome || '';
+            document.getElementById('linguagem').value = cartao.linguagem || '';
+            document.getElementById('estado').value = cartao.estado || '';
+            document.getElementById('link').value = cartao.link || '';
+            document.getElementById('img').value = cartao.img || '';
+        }
+    })
+    .catch((error) => console.error('Erro ao buscar os cartões:', error));
+
+// Exibir a tela de atualização
+
     telaAtt.style.right = '1vw'
 
     console.log(id);

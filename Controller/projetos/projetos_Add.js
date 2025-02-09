@@ -2,6 +2,30 @@ import { cadastrarCartao } from "./../Services/cartao_S.js";
 
 let telaCad = document.getElementById('telaCadastro')
 
+const limiteNome = 30;
+
+const nomeInput = document.getElementById('nomeAdd');
+const contadorNome = document.getElementById('contador-nome');
+
+function atualizarContador(input, contador, limite) {
+    const comprimento = input.value.length;
+    contador.textContent = `${comprimento}/${limite}`;
+
+    if (comprimento >= limite) {
+        contador.classList.add('contador-limite');
+    } else {
+        contador.classList.remove('contador-limite');
+    }
+}
+
+nomeInput.addEventListener('input', () => {
+    atualizarContador(nomeInput, contadorNome, limiteNome);
+});
+
+//"SABIO É O HOMEM QUE NAO DISCUTE COM MULHER"
+//Ass:Bryam Assolini, nas historias de seu discipulo Felipetto
+
+
 export function escondeTelaCad() {
     telaCad.style.left = '-100vw'
 }

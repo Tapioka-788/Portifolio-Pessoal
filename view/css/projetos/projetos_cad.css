@@ -13,17 +13,41 @@
     align-items: center;
 }
 
+#contador-nome {
+    font-size: 1.2vh;
+    color: rgb(128, 128, 128);
+    pointer-events: none;
+
+    margin-top: -4.75vh;
+    margin-right: -12.5vw;
+
+    z-index: 99;
+}
+
+
+.contador-limite {
+    color: rgb(255, 0, 0);
+    font-size: 1.2vh;
+    pointer-events: none;
+
+    margin-top: -4.75vh;
+    margin-right: -12.5vw;
+
+    z-index: 99; 
+}
+
 .Putos {
-    width: 10vw;
+    width: 12.5vw;
     height: 2vh;
     border-radius: 1vw;
     padding: 0 1vw;
+    z-index: 2;
 
     margin-top: -1vw;
 }
 
 #inputs_cad {
-    width: 15vw;
+    width: 17vw;
     height: 25vh;
 
     position: fixed;
