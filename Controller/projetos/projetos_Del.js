@@ -11,7 +11,7 @@ export function mostraTelaDel(i) {
     telaDelet.style.left = '0';
 }
 
-export function recolheDadosDel(){
+export function recolheDadosDel(i){
     excluirCartoes(cartoes[i].id);
     escodeTelaDel();
 }

@@ -5,16 +5,16 @@ let telaCad = document.getElementById('telaCadastro')
 const limiteNome = 30;
 
 const nomeInput = document.getElementById('nomeAdd');
-const contadorNome = document.getElementById('contador-nome');
+const contadorNome = document.getElementById('contadorNome');
 
 function atualizarContador(input, contador, limite) {
     const comprimento = input.value.length;
     contador.textContent = `${comprimento}/${limite}`;
 
     if (comprimento >= limite) {
-        contador.classList.add('contador-limite');
+        contador.classList.add('contadorLimite');
     } else {
-        contador.classList.remove('contador-limite');
+        contador.classList.remove('contadorLimite');
     }
 }
 
