@@ -3,23 +3,41 @@ import { cadastrarCartao } from "./../Services/cartao_S.js";
 let telaCad = document.getElementById('telaCadastro')
 
 const limiteNome = 30;
-
 const nomeInput = document.getElementById('nomeAdd');
-const contadorNome = document.getElementById('contadorNome');
+const contadorNome = document.getElementById('contador-nome');
 
-function atualizarContador(input, contador, limite) {
-    const comprimento = input.value.length;
-    contador.textContent = `${comprimento}/${limite}`;
+function atualizarContadorN(input, contador, limite) {
+    const comprimentoN = input.value.length;
+    contador.textContent = `${comprimentoN}/${limite}`;
 
-    if (comprimento >= limite) {
-        contador.classList.add('contadorLimite');
+    if (comprimentoN >= limite) {
+        contador.className ='contadorLimiteN';
     } else {
-        contador.classList.remove('contadorLimite');
+        contador.className = 'contadorNormalN';
     }
 }
 
 nomeInput.addEventListener('input', () => {
-    atualizarContador(nomeInput, contadorNome, limiteNome);
+    atualizarContadorN(nomeInput, contadorNome, limiteNome);
+});
+
+const limiteLing = 50;
+const lingInput = document.getElementById('linguagemAdd');
+const contadorLing = document.getElementById('contador-linguagem');
+
+function atualizarContadorL(input, contador, limite) {
+    const comprimentoL = input.value.length;
+    contador.textContent = `${comprimentoL}/${limite}`;
+
+    if (comprimentoL >= limite) {
+        contador.className ='contadorLimiteL';
+    } else {
+        contador.className = 'contadorNormalL';
+    }
+}
+
+lingInput.addEventListener('input', () => {
+    atualizarContadorL(lingInput, contadorLing, limiteLing);
 });
 
 //"SABIO É O HOMEM QUE NAO DISCUTE COM MULHER"

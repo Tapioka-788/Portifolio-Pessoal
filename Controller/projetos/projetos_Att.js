@@ -31,10 +31,49 @@ export function mostraTelaAtt(i) {
 
 // Exibir a tela de atualização
 
-    telaAtt.style.right = '1vw'
+    telaAtt.style.right = '0vw'
 
     console.log(id);
 }
+
+const limiteNome = 30;
+const nomeInput = document.getElementById('nome');
+const contadorNome = document.getElementById('contadorNome');
+
+async function atualizarContadorN(input, contador, limite) {
+    const comprimentoN = input.value.length;
+    contador.textContent = `${comprimentoN}/${limite}`;
+
+    if (comprimentoN >= limite) {
+        contador.className ='contadorLimiteN';
+    } else {
+        contador.className = 'contadorNormalN';
+    }
+}
+
+nomeInput.addEventListener('input', () => {
+    atualizarContadorN(nomeInput, contadorNome, limiteNome);
+});
+
+const limiteLing = 50;
+const lingInput = document.getElementById('linguagem');
+const contadorLing = document.getElementById('contadorLinguagem');
+
+function atualizarContadorL(input, contador, limite) {
+    const comprimentoL = input.value.length;
+    contador.textContent = `${comprimentoL}/${limite}`;
+
+    if (comprimentoL >= limite) {
+        contador.className ='contadorLimiteL';
+    } else {
+        contador.className = 'contadorNormalL';
+    }
+}
+
+lingInput.addEventListener('input', () => {
+    atualizarContadorL(lingInput, contadorLing, limiteLing);
+});
+
 export function recolheDadosAtt() {
     let nome = document.getElementById('nome');
     let linguagem = document.getElementById('linguagem');

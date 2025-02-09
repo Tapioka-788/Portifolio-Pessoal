@@ -39,8 +39,9 @@
         <div id="inputs_cad">
             <h1 class="Putos"> Cadastrar um Projeto </h1>
             <input class="Putos" id="nomeAdd" type="text" placeholder="Nome do Projeto" maxlength="30" required>
-            <p id="contadorNome" class="contadorLimite">0/30</p>
-            <input class="Putos" id="linguagemAdd" type="text" placeholder="Linguagens">
+            <p id="contador-nome" >0/30</p>
+            <input class="Putos" id="linguagemAdd" type="text" placeholder="Linguagens" maxlength="50" required>
+            <p id="contador-linguagem">0/50</p>
             <input class="Putos" id="estadoAdd" list="opcoesEstado" placeholder="Fase">
 
             <datalist id="opcoesEstado">
@@ -62,8 +63,10 @@
         <div id="inputs_att">
             <h1 class="PutosAtt">Atualizar</h1>
 
-            <input class="PutosAtt" id="nome" type="text" placeholder="Novo nome">
-            <input class="PutosAtt" id="linguagem" type="text" placeholder="Nova linguagem">
+            <input class="PutosAtt" id="nome" type="text" placeholder="Novo nome" maxlength="30" required>
+            <p id="contadorNome">0/30</p>
+            <input class="PutosAtt" id="linguagem" type="text" placeholder="Nova linguagem" maxlength="50" required>
+            <p id="contadorLinguagem">0/50</p>
             <input class="PutosAtt" id="estado" list="opcoesEstado" placeholder="Fase">
 
             <datalist id="opcoesEstado">

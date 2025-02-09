@@ -13,9 +13,8 @@
     align-items: center;
 }
 
-#contadorNome {
+#contador-nome {
     font-size: 1.2vh;
-    color: rgb(128, 128, 128);
     pointer-events: none;
 
     margin-top: -4.75vh;
@@ -24,16 +23,30 @@
     z-index: 99;
 }
 
-
-.contadorLimite {
-    color: rgb(255, 0, 0);
+#contador-linguagem{
     font-size: 1.2vh;
     pointer-events: none;
 
     margin-top: -4.75vh;
     margin-right: -12.5vw;
 
-    z-index: 99; 
+    z-index: 99;
+}
+
+.contadorLimiteN {
+    color: rgb(255, 0, 0);
+}
+
+.contadorNormalN {
+    color: rgb(128, 128, 128);
+}
+
+.contadorLimiteL {
+    color: rgb(255, 0, 0);
+}
+
+.contadorNormalL {
+    color: rgb(128, 128, 128);
 }
 
 .Putos {
