@@ -9,7 +9,7 @@ const banners = [
         infos: 'Curso para desenvolvimento de sites web, com html, css, js, e biblioteca node.js',
         id: '0',
         nbtn:'1',
-        cor: 'rgb(255,100,0)',
+        cor: 'RGB(0, 150, 200)',
     },
     {
         imagem: '',
@@ -18,7 +18,7 @@ const banners = [
         infos: 'Ensinho medio e ensino tecnico no curso de DS',
         id: '1',
         nbtn:'2',
-        cor: 'rgb(0,100,255)',
+        cor: 'RGB(0, 150, 200)',
     },
     {
         imagem: '',
@@ -27,7 +27,7 @@ const banners = [
         infos: 'Curso de ingles fluente',
         id: '2',
         nbtn:'3',
-        cor: 'rgb(255,255,0)',
+        cor: 'RGB(0, 150, 200)',
     },
     {
         imagem: '',
@@ -36,7 +36,7 @@ const banners = [
         infos: 'Curso para manutencao, fabricacao de pecas e manuzeamento de ferramentas e maquinas industriais',
         id: '3',
         nbtn:'4',
-        cor: 'rgb(255,255,255)',
+        cor: 'RGB(0, 150, 200)',
     },
     {
         imagem: '',
@@ -45,7 +45,7 @@ const banners = [
         infos: 'Curso de aprendizagem e manuzeamento de todas as ferramentas Microsft',
         id: '4',
         nbtn:'5',
-        cor: 'rgb(0,255,100)',
+        cor: 'RGB(0, 150, 200)',
     },
 ];
 

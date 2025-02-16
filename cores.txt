@@ -1,0 +1,4 @@
+RGB(255, 100, 0) → Laranja vibrante (cor principal)
+RGB(30, 30, 30) → Cinza escuro / Preto suave (para contraste e sofisticação)
+RGB(255, 200, 150) → Salmão claro (para equilíbrio e suavidade)
+RGB(0, 150, 200) → Azul turquesa (cor complementar para criar destaque)

@@ -3,14 +3,64 @@ section {
     height: 81vh;
 
     margin-top: 13vh;
+    padding-top: 1vh;
 
-    background-color: rgb(100, 100, 100);
+    background: linear-gradient(to bottom, rgb(100, 100, 100), rgb(255, 200, 150), rgb(100, 100, 100));
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#textozinho{
+    width: 35vw;
+    height: 3vh;
+    padding-left: 2.5vw;
+
+    border-radius: 1vw;
+
+    background-color: white;
+
+    margin: 10vh 30vw;
+}
+
+#cardsCtt {
+    width: 80vw;
+
+    margin: 0vh 10vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contatinhos {
+    width: 13vw;
+    height: 35vh;
+
+    border-radius: 1vw;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     align-items: center;
     align-content: center;
+
+    box-shadow: -10px 10px 0px 0px rgba(0,0,0,0.75);
 }
 
-h1{
-    margin-left: 38.50vw;
-    font-size: 5vw;
+section i {
+    margin-top: -0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.btnCtt {
+    width: 7vw;
+    height: 3vh;
+
+    background-color: orange;
+
+    border-radius: 1vh;
+    border: none;
 }

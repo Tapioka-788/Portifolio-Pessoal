@@ -45,9 +45,14 @@ export async function criarCartoes() {
         let link = document.createElement('button');
         link.className = 'link';
         link.textContent = 'Acesse Aqui';
-
+        
         link.addEventListener('click', () => {
-            window.location.href = cartoes[i].link;
+            let newTab = window.open(cartoes[i].link, '_blank');
+            if (newTab) {
+                newTab.focus();
+            } else {
+                alert('Pop-up bloqueado! Permita pop-ups para abrir o link em uma nova aba.');
+            }
         });
 
         let button = document.createElement('button')

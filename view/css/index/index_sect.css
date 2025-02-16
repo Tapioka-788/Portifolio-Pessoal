@@ -4,7 +4,7 @@ section {
 
     margin-top: 13vh;
 
-    background-color: rgb(100, 100, 100);
+    background: linear-gradient(to bottom, rgb(100, 100, 100), rgb(255, 200, 150), rgb(100, 100, 100));
 
     align-items: center;
     align-content: center;
@@ -30,8 +30,12 @@ section {
 
     animation: teste 8s infinite;
 
+    margin-top: 5vh;
+
     border-radius: 2vw;
-    border: solid 0.2vw rgb(255, 100, 0);
+    border: solid 0.2vw RGB(30, 30, 30);
+
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 /* Foto Animada */
@@ -54,10 +58,15 @@ section {
 
 #infos_nomes {
     width: 40vw;
+    height: 35vh;
 
     display: flex;
     flex-direction: column;
     text-align: center;
+
+    border-radius: 2vw;
+
+    background-color: RGB(30, 30, 30);
 }
 
 #nome_sobrenome {
@@ -82,6 +91,7 @@ section {
 
 #infos_nomes p {
     font-size: 4vh;
+    color: RGB(255, 200, 150);
 }
 
 /* Carro */

@@ -5,7 +5,6 @@ section {
     margin-top: 13vh;
 
     background-color: rgb(100, 100, 100);
-
     z-index: 1;
 
     display: flex;
@@ -16,6 +15,8 @@ section {
     font-size: 0.6vw;
 
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 }
 
 #pagina {
@@ -36,6 +37,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .card:hover{
@@ -93,6 +96,8 @@ section {
     background-color: #ffffff;
 
     font-size: 10vw;
+
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 #cartao_add:hover {
@@ -104,12 +109,25 @@ section {
 
 #lixeira {
     background-color: rgb(218, 48, 48);
+
+    width: 2vw;
+    height: 2vw;
+
+    border-radius: 1vh;
+    border: none;
 }
 
 #lapis {
     background-color: rgb(48, 218, 48);
+
+    width: 2vw;
+    height: 2vw;
+
+    border-radius: 1vh;
+    border: none;
 }
 
 #lixeira,#lapis:hover{
+    transform: scale(1.1);
     cursor: pointer;
 }
