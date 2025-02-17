@@ -16,7 +16,7 @@ section {
 
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
+    scrollbar-color: rgb(100, 100, 100) transparent;
 }
 
 #pagina {
