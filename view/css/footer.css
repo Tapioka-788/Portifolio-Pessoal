@@ -6,8 +6,8 @@ footer {
     bottom: 0;
 
     background-color: RGB(30, 30, 30);
-
-    padding: 0 2vw;
+/* 
+    padding: 0 2vw; */
 
     display: flex;
     justify-content: space-between;
@@ -41,7 +41,7 @@ footer h3 {
 } */
 
 /* Efeito Hover com prefixos para compatibilidade */
-.tpsCtts:hover {
+/* .tpsCtts:hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -55,7 +55,7 @@ footer h3 {
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-}
+} */
 
 #email {
     width: 40vw;
@@ -66,6 +66,38 @@ footer h3 {
 
 #mail {
     color: RGB(0, 150, 200);
+}
+
+#feedback{
+    width: 8vw;
+    height: 4vh;
+
+    margin: 0 4vw;
+
+    background-color: rgb(255, 100, 0);
+    color: rgb(255, 255, 255);
+
+    border-radius: 2vw;
+    border: none;
+    h1{
+        font-size: 1.5vh;
+    }
+}
+
+#feedback:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+
+    cursor: pointer;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 480px), (max-height: 882px) {
@@ -98,3 +130,4 @@ footer h3 {
         height: 8vw;
     } */
 }
+
