@@ -123,6 +123,7 @@ section {
 
         margin-top: 10vh;
 
+        background: linear-gradient(to bottom,rgb(100, 100, 100), rgb(100, 100, 100));
         background-color: rgb(100, 100, 100);
     
         align-items: center;
@@ -130,20 +131,27 @@ section {
     }
 
     #imagem_grande {
-        width: 0vw;
-        border: none;
+        width: 60vw;
+        height: 20vh;
+        border: solid 0.1vh black;
     }
 
     #infos {
         width: 00vw;
         height: -20vh;
+
+        margin: 0vw 10vh;
+
     
         display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
     }
 
     #infos_nomes {
-        width: 20vw;
+        width: 60vw;
+
+        margin-top: 5vh;
     
         display: flex;
         flex-direction: column;
@@ -153,7 +161,7 @@ section {
     #nome_sobrenome {
         width: 30vw;
     
-        margin: 0 5vw;
+        margin: 0 15vw;
     
         display: flex;
         text-align: center;
