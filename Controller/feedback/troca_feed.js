@@ -5,5 +5,13 @@ export function mostraTelFeed() {
 }
 
 export function escondeTelFeed() {
-    feedbackSection.style.left = '100vw'
+    feedbackSection.style.left = '100vw';
+
+    const enviar = document.getElementById("enviarFeed");
+
+    if (enviar) {
+        enviar.onclick = function() {
+            alert("ESTA EM DEV, TENHA PACIENCIA!!!");
+        };
+    }
 }
