@@ -19,7 +19,7 @@ export async function criarFeedbackSection() {
     
         feedResposta.appendChild(textoFeedResposta);
         feedResposta.appendChild(descricaoFeedResposta);
-    }
 
-    feedbackSection.appendChild(feedResposta);
+        feedbackSection.appendChild(feedResposta);
+    }
 }

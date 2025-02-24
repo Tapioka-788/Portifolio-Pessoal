@@ -103,13 +103,11 @@
 .textoRespostaFeed{
     width: 20vw;
     height: 3vh;
-    background-color: aqua;
+
     text-align: center;
 }
 
 .descricaoFeedResposta{
     width: 20vw;
     height: 12vh;
-
-    background-color: red;
 }
