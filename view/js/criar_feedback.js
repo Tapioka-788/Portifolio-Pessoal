@@ -1,41 +1,25 @@
-export function criarFeedbackSection() {
+import { pegarFeedBack } from "./../../Controller/Services/feedback_S.js"
+
+export async function criarFeedbackSection() {
     let feedbackSection = document.getElementById("feedback_sect");
 
-    let caixaFeed = document.createElement("div");
-    caixaFeed.id = "caixa_feed";
+    const feedback = await pegarFeedBack()
 
-    let titulo = document.createElement("h1");
-    titulo.id = 'feedTexto'
-    titulo.textContent = "Deixe seu FeedBack!";
-
-    let inputFeedback = document.createElement("input");
-    inputFeedback.type = "text";
-    // inputFeedback.placeholder = "Comentário";
-    inputFeedback.placeholder = "EM DESENVOLVIMENTO AINDA";
-    inputFeedback.id = "feedbackInput";
-
-    let buttonContainer = document.createElement("div");
-    buttonContainer.id = 'buttonContainer'
-
-    let sendButton = document.createElement("button");
-    sendButton.className = "feedButton";
-    sendButton.textContent = "Enviar";
-
-    let cancelButton = document.createElement("button");
-    cancelButton.className = "feedButton";
-    cancelButton.textContent = "Cancelar";
-    cancelButton.onclick = escondeTelFeed;
-
-    let feedbackList = document.createElement("div");
-    feedbackList.id = "feedbackList";
-
-    buttonContainer.appendChild(sendButton);
-    buttonContainer.appendChild(cancelButton);
-
-    caixaFeed.appendChild(titulo);
-    caixaFeed.appendChild(inputFeedback);
-    caixaFeed.appendChild(buttonContainer);
-    caixaFeed.appendChild(feedbackList);
+    for (let i = 0; i < feedback.length; i++) {
+        let feedResposta = document.createElement('div');
+        feedResposta.className = 'caixaRespostaFeed';
     
-    feedbackSection.appendChild(caixaFeed);
+        let textoFeedResposta = document.createElement('h1');
+        textoFeedResposta.textContent = feedback[i].titulo
+        textoFeedResposta.className = "textoRespostaFeed";
+    
+        let descricaoFeedResposta = document.createElement('p');
+        descricaoFeedResposta.textContent =  feedback[i].descricao
+        descricaoFeedResposta.className = "descricaoFeedResposta";
+    
+        feedResposta.appendChild(textoFeedResposta);
+        feedResposta.appendChild(descricaoFeedResposta);
+    }
+
+    feedbackSection.appendChild(feedResposta);
 }

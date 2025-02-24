@@ -7,7 +7,7 @@
     <title>Portifolio do Felipetto </title>
     <link rel="stylesheet" href="../css/index/index_link.css">
     <script type="module" src="../../Controller/header.js" defer></script>
-    <script type="module" src="../../Controller/feedback.js" defer></script>
+    <script type="module" src="./../../Controller/feedback/feedback.js" defer></script>
     <script src="https://kit.fontawesome.com/a451098362.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,48 +17,72 @@
     <header id="header">
         <div id="logo_profissao">
 
-            <div id="imagem_logo"> 
+            <div id="imagem_logo">
                 <img id="imagem_icone"
                     src="https://pipocanamadrugada.com.br/site/wp-content/uploads/2022/12/Gato-de-Botas-2-capa-725x375.jpg">
             </div>
             <h3 id="hierarquia"> Desevolvedor Web</h3>
         </div>
-        
+
         <div id="botoes">
         </div>
     </header>
 
     <section>
 
-            <div id="infos">
+        <div id="infos">
 
-                <div id="imagem_big">
-                     <img id="imagem_grande"
-                        src="./../../Model/foto2.jpeg">
+            <div id="imagem_big">
+                <img id="imagem_grande" src="./../../Model/foto2.jpeg">
+            </div>
+
+            <div class="texto" id="infos_nomes">
+                <div id="nome_sobrenome">
+                    <h1 id="primeiro_nome">Guilherme</h1>
+                    <h1 id="segundo_nome">Felipetto</h1>
                 </div>
-
-                <div class="texto" id="infos_nomes">
-                    <div id="nome_sobrenome">
-                        <h1 id="primeiro_nome">Guilherme</h1>
-                        <h1 id="segundo_nome">Felipetto</h1>
-                    </div>
-                        <p id="paragrafo_um">
-                        Programador junior/treene Front/Back end, nascido em 2008, aluno do CEMA no curso de DS, tenho conhecimento na linguagens Html, Css, JavaSscript; Com conhecimento na biblioteca Node.js e atualmente estou estudando React.
-                        </p>
-                    </div>
+                <p id="paragrafo_um">
+                    Programador junior/treene Front/Back end, nascido em 2008, aluno do CEMA no curso de DS, tenho
+                    conhecimento na linguagens Html, Css, JavaSscript; Com conhecimento na biblioteca Node.js e
+                    atualmente estou estudando React.
+                </p>
             </div>
+        </div>
 
-            <div>
-                 <img id="carro"
-                    src="https://th.bing.com/th/id/R.974fe0a8749dc3c5202104ee53453f3f?rik=0B4n7PoRjxMoUA&pid=ImgRaw&r=0">
-            </div>
+        <div>
+            <img id="carro"
+                src="https://th.bing.com/th/id/R.974fe0a8749dc3c5202104ee53453f3f?rik=0B4n7PoRjxMoUA&pid=ImgRaw&r=0">
+        </div>
     </section>
 
+<!-- Tela de FeedBack -->
+
     <section id="feedback_sect">
+        <div id="caixa_feed">
+            <h1 id="feedTexto">Deixe seu FeedBack! Em Dev ainda</h1>
+            <input type="text" class="feedbackInput" maxlength="45" required id="paginaFeed" placeholder="Em qual tela/parte do site você gostaria de comentar?">
+            <input type="text" class="feedbackInput" maxlength="100" required id="descricaoFeed" placeholder="Deixe seu comentario aqui">
+
+            <div id="buttonContainer">
+                <button class="feedButton">Enviar</button>
+                <button class="feedButton" onclick="escondeTelFeed()">Cancelar</button>
+            </div>
+
+            <div id="feedbackList"></div>
+        </div>
+
+        <div class="caixaRespostaFeed">
+            <h1 class="textoRespostaFeed">titulo 1</h1>
+            <p class="descricaoFeedResposta">descricao 1</p>
+        </div>
+        <div class="caixaRespostaFeed">
+            <h1 class="textoRespostaFeed">titulo 2</h1>
+            <p class="descricaoFeedResposta">descricao 2</p>
+        </div>
     </section>
 
     <footer>
-        <h1 id="email">Entre em contato com o dono desta página em:  
+        <h1 id="email">Entre em contato com o dono desta página em:
             <a id="mail" href="mailto:guilhermezuchellifelipetto@gmail.com">guilhermezuchellifelipetto@gmail.com</a>
         </h1>
 
