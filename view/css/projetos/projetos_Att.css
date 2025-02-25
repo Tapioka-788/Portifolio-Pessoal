@@ -15,14 +15,17 @@
     overflow: hidden;
 }
 
-#contadorNome {
-    font-size: 1.2vh;
-    pointer-events: none;
+.inputeCOntador{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
-    margin-top: -2.5vh;
-    margin-right: -12.5vw;
+    width: 17vw;
 
-    z-index: 99;
+    padding-left: 2vw;
+    p{
+        margin-left: 0.25vw;
+    }
 }
 
 .contadorLimiteN {
@@ -31,16 +34,6 @@
 
 .contadorNormalN {
     color: rgb(128, 128, 128);
-}
-
-#contadorLinguagem{
-    font-size: 1.2vh;
-    pointer-events: none;
-
-    margin-top: -2.5vh;
-    margin-right: -12.5vw;
-
-    z-index: 99;
 }
 
 .contadorLimiteL {
@@ -59,11 +52,17 @@
     z-index: 2;
 
     margin: 0.5vh 0vw;
+
+    border: solid 0.1vw rgb(128, 128, 128);
+}
+
+#tituleAtt{
+    border: none;
 }
 
 #inputs_att{
-    width: 17vw;
-    height: 25vh;
+    width: 27vw;
+    height: 30vh;
 
     position: fixed;
     top: 32.5vh;
@@ -86,11 +85,17 @@
 }
 
 .attbuts{
-    width: 3.6vw;
-    border-radius: 1vw;
+    width: 5vw;
+    height: 4vh;
+
+    margin-top: 3vh;
+
+    border-radius: 3vw;
+    border: none;
+
+    background-color: rgb(255, 100, 0);
 }
 
 .attbuts:hover{
     transform: scale(1.1);
-    background-color: rgb(242, 186, 87);
 }

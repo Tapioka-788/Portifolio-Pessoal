@@ -11,7 +11,7 @@ export function escondeTelFeed() {
 
     if (enviar) {
         enviar.onclick = function() {
-            alert("ESTA EM DEV, TENHA PACIENCIA!!!");
+            recolheDadosFeed();
         };
     }
 }

@@ -2,7 +2,7 @@
     width: 100vw;
     height: 81vh;
 
-    z-index: 9999999999999999999999999999999999999;
+    z-index: 7;
 
     margin-top: 13vh;
 
@@ -44,8 +44,42 @@
     font-family: 'Times New Roman', Times, serif;
 } */
 
+.inputeCOntador{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p{
+        color: rgb(128, 128, 128);
+
+        font-size: 1vh;
+
+        margin-top: -0.75vh;
+        margin-left: 0.25vw;
+
+        cursor: none;
+    }
+}
+
+
+.contadorLimiteN {
+    color: rgb(255, 0, 0);
+}
+
+.contadorNormalN {
+    color: rgb(128, 128, 128);
+}
+
+.contadorLimiteL {
+    color: rgb(255, 0, 0);
+}
+
+.contadorNormalL {
+    color: rgb(128, 128, 128);
+}
+
+
 .feedbackInput{
-    width: 20vw;
+    width: 18vw;
     height: 3vh;
 
     margin-bottom: 2vh;

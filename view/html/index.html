@@ -60,11 +60,17 @@
     <section id="feedback_sect">
         <div id="caixa_feed">
             <h1 id="feedTexto">Deixe seu FeedBack! Em Dev ainda</h1>
-            <input type="text" class="feedbackInput" maxlength="45" required id="paginaFeed" placeholder="Em qual tela/parte do site você gostaria de comentar?">
-            <input type="text" class="feedbackInput" maxlength="100" required id="descricaoFeed" placeholder="Deixe seu comentario aqui">
+            <div class="inputeCOntador">
+                <input type="text" class="feedbackInput" maxlength="45" required id="paginaFeed" placeholder="Em qual tela/parte do site você gostaria de comentar?">
+                <p id="contadorNome">0/45</p>
+            </div>
+            <div class="inputeCOntador">
+                <input type="text" class="feedbackInput" maxlength="100" required id="descricaoFeed" placeholder="Deixe seu comentario aqui">
+                <p id="contadorLinguagem">0/100</p>
+            </div>
 
             <div id="buttonContainer">
-                <button class="feedButton" id="enviarFeed" onclick="escondeTelFeed()">Enviar</button>
+                <button class="feedButton" id="enviarFeed" onclick="recolheDadosFeed()">Enviar</button>
                 <button class="feedButton" onclick="escondeTelFeed()">Cancelar</button>
             </div>
             <div id="feedbackList"></div>

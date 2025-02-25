@@ -197,14 +197,12 @@ section {
     width: 30vw;
     height: 3vh;
 
-    background-color: rgb(200, 200, 200);
-
     margin: 0.5vh 0vw 1vh;
 
     padding-left: 1vw;
 
     border-radius: 1vw;
-    border: solid 0.1vw black;
+    border: solid 0.1vh RGB(100, 100, 100);
 }
 
 .escreva:hover {
@@ -222,13 +220,11 @@ section {
 }
 
 .add_Btn {
-    width: 10vw;
-    height: 5vh;
-
-
-    margin: 1.5vh 0vw 0vh;
+    width: 5vw;
+    height: 4vh;
 
     border-radius: 3vw;
+    border: none;
 
     background-color: rgb(255, 100, 0);
 }
