@@ -9,6 +9,7 @@ export function escodeTelaDel() {
 export function mostraTelaDel(i) {
     id = i;
     telaDelet.style.left = '0';
+    alert('Para excluir um cartao, insira o nome e a senha!')
 }
 
 export function recolheDadosDel(i){

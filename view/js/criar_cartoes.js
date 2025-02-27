@@ -58,7 +58,7 @@ export async function criarCartoes() {
         let button = document.createElement('button')
         button.id = 'lixeira'
         button.addEventListener('click', ()=>{
-            excluirCartoes(cartoes[i].id);
+            mostraTelaDel(cartoes[i].id);
         });
 
         let lixo = document.createElement('i')
