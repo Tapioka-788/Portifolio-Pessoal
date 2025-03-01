@@ -122,13 +122,16 @@ section {
         height: 80vh;
         width: 100vw;
 
-        margin-top: 10vh;
+        margin-top: 13vh;
 
         background: linear-gradient(to bottom,rgb(100, 100, 100), rgb(100, 100, 100));
         background-color: rgb(100, 100, 100);
     
         align-items: center;
         align-content: center;
+
+        
+        overflow-x: hidden;
     }
 
     #imagem_grande {

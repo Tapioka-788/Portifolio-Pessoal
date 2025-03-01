@@ -7,6 +7,7 @@
     <title>Portifolio do Felipetto </title>
     <link rel="stylesheet" href="../css/projetos/projetos_link.css">
     <script type="module" src="../../Controller/header.js"></script>
+    <script type="module" src="./../../Controller/feedback/feedback.js" defer></script>
     <script type="module" src="../../Controller/projetos/projetos.js" defer></script>
     <script src="https://kit.fontawesome.com/a451098362.js" crossorigin="anonymous"></script>
 </head>
@@ -17,20 +18,20 @@
     <header id="header">
         <div id="logo_profissao">
 
-            <div id="imagem_logo"> 
+            <div id="imagem_logo">
                 <img id="imagem_icone"
                     src="https://pipocanamadrugada.com.br/site/wp-content/uploads/2022/12/Gato-de-Botas-2-capa-725x375.jpg">
             </div>
             <h3 id="hierarquia"> Desevolvedor Web</h3>
         </div>
-        
+
         <div id="botoes">
         </div>
     </header>
 
     <section id="section">
         <div id="pagina">
-          
+
 
         </div>
     </section>
@@ -40,7 +41,7 @@
             <h1 class="Putos" id="tituleCadd"> Cadastrar um Projeto </h1>
             <div class="inputeCOntador">
                 <input class="Putos" id="nomeAdd" type="text" placeholder="Nome do Projeto" maxlength="30" required>
-                <p id="contador-nome" >0/30</p>
+                <p id="contador-nome">0/30</p>
             </div>
             <div class="inputeCOntador">
                 <input class="Putos" id="linguagemAdd" type="text" placeholder="Linguagens" maxlength="50" required>
@@ -100,11 +101,40 @@
             </div>
         </div>
     </section>
+    <!-- Tela de FeedBack -->
+
+    <section id="feedback_sect">
+        <div id="caixa_feed">
+            <h1 id="feedTexto">Deixe seu FeedBack! Em Dev ainda</h1>
+            <div class="inputeCOntador">
+                <input type="text" class="feedbackInput" maxlength="45" required id="paginaFeed"
+                    placeholder="Em qual tela/parte do site você gostaria de comentar?">
+                <p id="contadorNome">0/45</p>
+            </div>
+            <div class="inputeCOntador">
+                <input type="text" class="feedbackInput" maxlength="100" required id="descricaoFeed"
+                    placeholder="Deixe seu comentario aqui">
+                <p id="contadorLinguagem">0/100</p>
+            </div>
+
+            <div id="buttonContainer">
+                <button class="feedButton" id="enviarFeed" onclick="recolheDadosFeed()">Enviar</button>
+                <button class="feedButton" onclick="escondeTelFeed()">Cancelar</button>
+            </div>
+            <div id="feedbackList"></div>
+        </div>
+    </section>
 
     <footer>
-        <h1 id="email">Entre em contato com o dono desta página em:  
+        <div id="ajustes"></div>
+
+        <h1 id="email">Entre em contato com o dono desta página em:
             <a id="mail" href="mailto:guilhermezuchellifelipetto@gmail.com">guilhermezuchellifelipetto@gmail.com</a>
         </h1>
+
+        <button id="feedback" onclick="mostraTelFeed()">
+            <h1>FeedBack</h1>
+        </button>
     </footer>
 </body>
 

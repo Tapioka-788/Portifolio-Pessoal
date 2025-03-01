@@ -7,6 +7,7 @@
     <title>Portifolio do Felipetto </title>
     <link rel="stylesheet" href="../css/contato/contato_link.css">
     <script type="module" src="../../Controller/header.js"></script>
+    <script type="module" src="./../../Controller/feedback/feedback.js" defer></script>
     <script src="https://kit.fontawesome.com/a451098362.js" crossorigin="anonymous"></script>
 </head>
 
@@ -32,34 +33,28 @@
         <div id="cardsCtt">
             <div class="contatinhos">
                 <h1 class="txtCtt"> Whatsapp</h1>
-                <i class="fa-brands fa-whatsapp fa-2xl" ></i>
-                <button
-                    onclick="window.open('https://wa.me/qr/TTIRKUOQMVXSD1', '_blank')"
-                    class="btnCtt">
+                <i class="fa-brands fa-whatsapp fa-2xl"></i>
+                <button onclick="window.open('https://wa.me/qr/TTIRKUOQMVXSD1', '_blank')" class="btnCtt">
                     Acesse Aqui
                 </button>
             </div>
             <div class="contatinhos">
                 <h1 class="txtCtt"> Instagram</h1>
-                <i class="fa-brands fa-instagram fa-2xl" ></i>
-                <button
-                    onclick="window.open('https://www.instagram.com/gui_felipetto/', '_blank')"
-                    class="btnCtt">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+                <button onclick="window.open('https://www.instagram.com/gui_felipetto/', '_blank')" class="btnCtt">
                     Acesse Aqui
                 </button>
             </div>
             <div class="contatinhos">
                 <h1 class="txtCtt"> GitHub</h1>
-                <i class="fa-brands fa-github fa-2xl" ></i>
-                <button
-                    onclick="window.open('https://github.com/Tapioka-788', '_blank')"
-                    class="btnCtt">
+                <i class="fa-brands fa-github fa-2xl"></i>
+                <button onclick="window.open('https://github.com/Tapioka-788', '_blank')" class="btnCtt">
                     Acesse Aqui
                 </button>
             </div>
             <div class="contatinhos">
                 <h1 class="txtCtt">LinkedIn</h1>
-                <i class="fa-brands fa-linkedin-in fa-2xl" ></i>
+                <i class="fa-brands fa-linkedin-in fa-2xl"></i>
                 <button
                     onclick="window.open('https://www.linkedin.com/in/guilherme-zuchelli-felipetto-86241119b/', '_blank')"
                     class="btnCtt">
@@ -68,14 +63,42 @@
             </div>
         </div>
     </section>
+    <!-- Tela de FeedBack -->
 
+    <section id="feedback_sect">
+        <div id="caixa_feed">
+            <h1 id="feedTexto">Deixe seu FeedBack! Em Dev ainda</h1>
+            <div class="inputeCOntador">
+                <input type="text" class="feedbackInput" maxlength="45" required id="paginaFeed"
+                    placeholder="Em qual tela/parte do site você gostaria de comentar?">
+                <p id="contadorNome">0/45</p>
+            </div>
+            <div class="inputeCOntador">
+                <input type="text" class="feedbackInput" maxlength="100" required id="descricaoFeed"
+                    placeholder="Deixe seu comentario aqui">
+                <p id="contadorLinguagem">0/100</p>
+            </div>
+
+            <div id="buttonContainer">
+                <button class="feedButton" id="enviarFeed" onclick="recolheDadosFeed()">Enviar</button>
+                <button class="feedButton" onclick="escondeTelFeed()">Cancelar</button>
+            </div>
+            <div id="feedbackList"></div>
+        </div>
+    </section>
 
     <footer>
-        <h1 id="email">Entre em contato com o dono desta página em:  
+        <div id="ajustes"></div>
+
+        <h1 id="email">Entre em contato com o dono desta página em:
             <a id="mail" href="mailto:guilhermezuchellifelipetto@gmail.com">guilhermezuchellifelipetto@gmail.com</a>
         </h1>
+
+        <button id="feedback" onclick="mostraTelFeed()">
+            <h1>FeedBack</h1>
+        </button>
     </footer>
-    
+
 </body>
 
 </html>
