@@ -14,4 +14,10 @@ export function escondeTelFeed() {
             recolheDadosFeed();
         };
     }
+
+    let titulo = document.getElementById('paginaFeed');
+    let descricao = document.getElementById('descricaoFeed');
+
+    titulo.value = ''
+    descricao.value = ''
 }

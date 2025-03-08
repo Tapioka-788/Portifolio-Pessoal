@@ -93,10 +93,11 @@
     </section>
     <section id="confirm_delete">
         <div class="smallScreen">
-            <h1>Tem certeza que deseja excluir o cartão?</h1>
+            <h1 id="txtConfirm">Tem certeza que deseja excluir o cartão?</h1>
+            <p id="avisinho">(Preencha os dados e aperte Enter)</p>
             <div class="btns_confirm">
-                <input class="btn_confirm" type="text" placeholder="Senha">
-                <input class="btn_confirm" type="text" placeholder="Nome do Projeto">
+                <input class="btn_confirm" id="senha" type="text" placeholder="Senha">
+                <input class="btn_confirm" id="npexcluir" type="text" placeholder="Nome do Projeto">
                 <button class="btn_confirm" id="btn_nao" onclick="escodeTelaDel()">Cancelar</button>
             </div>
         </div>

@@ -5,6 +5,12 @@ let id;
 
 export function escodeTelaDel() {
     telaDelet.style.left = '-100vw';
+
+    let senha = document.getElementById('senha');
+    let npexcluir = document.getElementById('npexcluir');
+
+    senha.value = ''
+    npexcluir.value = ''
 }
 export function mostraTelaDel(i) {
     id = i;
@@ -16,3 +22,9 @@ export function recolheDadosDel(i){
     excluirCartoes(cartoes[i].id);
     escodeTelaDel();
 }
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        alert("A Senha e o Nome do Projeto prescisão estar corretos, preencha corretamente!");
+    }
+})
