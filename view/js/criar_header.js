@@ -1,4 +1,5 @@
-import { pegarHeader } from "../../Controller/Services/header_S.js";
+// import { pegarHeader } from "../../Controller/Services/header_S.js";
+import { header }from "./../../Model/header.js"
 
 export async function criarHeader() {
     let Sepheader = document.getElementById('header');
@@ -8,7 +9,7 @@ export async function criarHeader() {
     // Sepheader.innerHTML = '';
     botoes.innerHTML = '';
 
-    const header = await pegarHeader()
+    // const header = await pegarHeader()
 
     for (let i = 0; i < header.length; i++) {
         let button = document.createElement('button')
