@@ -8,7 +8,7 @@ const banners = [
         curso: 'Desenvolvedor WEB',
         infos: 'Curso para desenvolvimento de sites web, com html, css, js, e biblioteca node.js',
         id: '0',
-        nbtn:'1',
+        nbtn: '1',
         cor: 'RGB(0, 150, 200)',
     },
     {
@@ -17,7 +17,7 @@ const banners = [
         curso: 'Ensino tecnico - Desenvolvimento de sistemas',
         infos: 'Ensinho medio e ensino tecnico no curso de DS',
         id: '1',
-        nbtn:'2',
+        nbtn: '2',
         cor: 'RGB(0, 150, 200)',
     },
     {
@@ -26,7 +26,7 @@ const banners = [
         curso: 'Inglês',
         infos: 'Curso de ingles fluente',
         id: '2',
-        nbtn:'3',
+        nbtn: '3',
         cor: 'RGB(0, 150, 200)',
     },
     {
@@ -35,7 +35,7 @@ const banners = [
         curso: 'Manutencao para operadores de Maquinas',
         infos: 'Curso para manutencao, fabricacao de pecas e manuzeamento de ferramentas e maquinas industriais',
         id: '3',
-        nbtn:'4',
+        nbtn: '4',
         cor: 'RGB(0, 150, 200)',
     },
     {
@@ -44,7 +44,7 @@ const banners = [
         curso: 'Curso de informatica',
         infos: 'Curso de aprendizagem e manuzeamento de todas as ferramentas Microsft',
         id: '4',
-        nbtn:'5',
+        nbtn: '5',
         cor: 'RGB(0, 150, 200)',
     },
 ];
@@ -58,7 +58,7 @@ export function criarBanner() {
 
     for (let i = 0; i < banners.length; i++) {
         bannersContainer.style.width = `${banners.length * 100}vw`;
-        
+
         let banner = document.createElement('div');
         banner.style.backgroundColor = banners[i].cor;
         banner.className = 'banner';
@@ -75,7 +75,9 @@ export function criarBanner() {
 
         let imagem = document.createElement('img')
         imagem.className = 'imagem'
-        imagem.src = banners[i].imagem
+        imagem.src = "https://www.goiania.go.leg.br/institucional/parlamentares/Fotos-de-parlamentares/sem-foto.png/image"
+
+        // imagem.src = banners[i].imagem
 
         //textos
 

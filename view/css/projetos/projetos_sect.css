@@ -1,142 +1,147 @@
+/* Configuração Base da Seção */
 section {
     width: 100vw;
     height: 81vh;
-
     margin-top: 13vh;
-
     z-index: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-family: "none";
+    font-family: sans-serif;
+    /* Substituído "none" por fallback */
     font-size: 0.6vw;
-
     overflow-y: scroll;
     scrollbar-width: thin;
+
+    /* Nesting do Canvas de fundo */
+    & canvas {
+        width: 100vw;
+        height: 81vh;
+        background-color: rgb(5, 5, 5);
+        background-image:
+            radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+            radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+        margin: 0;
+        z-index: -1;
+    }
 }
 
+/* Grid de Projetos */
 #pagina {
     width: 70vw;
     height: 70vh;
-
     display: grid;
     grid-gap: 5vw;
     grid-template-columns: 20vw 20vw 20vw;
+
+    /* Estilo comum para os cards (Projetos e Card de Add) */
+    & .card,
+    & #cartao_add {
+        width: 20vw;
+        height: 30vh;
+        border-radius: 2vw;
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+    }
+
+    /* Detalhes específicos do Card de Projeto */
+    & .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .imagem {
+            width: 10vw;
+            height: 13vh;
+            margin: 2vh 5vw 0vh;
+        }
+
+        & .boxInfos {
+            width: 15vw;
+            height: 7vh;
+            margin-left: 2vw;
+        }
+
+        & .botaoBox {
+            height: 13vh;
+            width: 20vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            & .link {
+                width: 10vw;
+                height: 5vh;
+                border-radius: 2vw;
+                background-color: white;
+                font-family: "East Sea Dokdo";
+                font-weight: bold;
+                font-size: 1vw;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    /* Detalhes específicos do Card de Adicionar */
+    & #cartao_add {
+        padding-top: 0.7vw;
+        border-radius: 1vw;
+        border: solid 0.2vw #011126;
+        background-color: #ffffff;
+        font-size: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: rgb(242, 186, 87);
+        }
+    }
 }
 
-.card {
-    width: 20vw;
-    height: 30vh;
+/* Botões de Ação (Lixeira e Lápis) */
+#lixeira,
+#lapis {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 1vh;
+    border: none;
+    transition: transform 0.2s ease;
 
-    border-radius: 2vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-.card:hover{
-    transform: scale(1.01);
-}
-
-.boxInfos {
-    width: 15vw;
-    height: 7vh;
-
-    margin-left: 2vw;
-}
-
-.imagem {
-    width: 10vw;
-    height: 13vh;
-    margin: 2vh 5vw 0vh;
-}
-
-.botaoBox {
-    height: 13vh;
-    width: 20vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.link {
-    width: 10vw;
-    height: 5vh;
-
-    border-radius: 2vw;
-
-    background-color: white;
-        
-        
-    font-family: "East Sea Dokdo";
-    font-weight: bold;
-    font-size: 1vw;
-}
-
-.link:hover{
-    transform: scale(1.1);
-
-    cursor: pointer;
-}
-
-#cartao_add {
-    width: 20vw;
-    height: 30vh;
-    padding-top: 0.7vw;
-
-    border-radius: 1vw;
-    border: solid 0.2vw #011126;
-    background-color: #ffffff;
-
-    font-size: 10vw;
-
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-#cartao_add:hover {
-    transform: scale(1.01);
-    background-color: rgb(242, 186, 87);
-
-    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
 }
 
 #lixeira {
     background-color: rgb(218, 48, 48);
-
-    width: 2vw;
-    height: 2vw;
-
-    border-radius: 1vh;
-    border: none;
 }
 
 #lapis {
     background-color: rgb(48, 218, 48);
-
-    width: 2vw;
-    height: 2vw;
-
-    border-radius: 1vh;
-    border: none;
 }
 
-#lixeira,#lapis:hover{
-    transform: scale(1.1);
-    cursor: pointer;
+/* Melhoria visual para as Telas de Cadastro/Ajuste (Modais) */
+#telaCadastro,
+#telaAtt,
+#confirm_delete {
+    /* Estilos compartilhados para os overlays */
+    position: fixed;
+    /* Recomendado para modais */
+    background-color: rgba(0, 0, 0, 0.5);
+
+    & .inputeCOntador {
+        position: relative;
+        /* Estilos para os contadores de caracteres dentro das telas */
+    }
 }
-
-canvas {
-    width: 100vw;
-    height: 81vh;
-    background-color: rgb(5, 5, 5);
-    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-      radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
-      margin: 0;
-
-      z-index: -1;
-  }
