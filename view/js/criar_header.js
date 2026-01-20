@@ -27,6 +27,7 @@ export async function criarHeader() {
 
         //icone
         let ic = document.createElement('i')
+        ic.id = 'icones_botoes'
         ic.classList = header[i].icone;
 
         button.appendChild(h3)

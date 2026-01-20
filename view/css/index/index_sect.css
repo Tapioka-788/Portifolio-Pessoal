@@ -1,218 +1,95 @@
+/* Configuração Geral da Seção e Elementos Filhos */
 section {
     width: 100vw;
     height: 81vh;
-/* 
-    margin-top: 13vh;
-
-    background: linear-gradient(to bottom, RGB(30, 30, 30), rgb(100, 100, 100)); */
-
     align-items: center;
     align-content: center;
     z-index: 0;
-
-    position: absolute;
-    top: 13vh;
-    /* background-color: RGB(30, 30, 30); */
-}
-
-/* Informacaos */
-
-#infos {
-    width: 90vw;
-    height: 50vh;
-
-    /* margin: 5vw 15.5vh; */
-
     position: absolute;
     top: 13vh;
 
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/* Foto */
-
-#imagem_grande {
-    width: 25vw;
-    height: 25vh;
-
-    animation: teste 8s infinite;
-
-    margin-top: 5vh;
-
-    border-radius: 2vw;
-    border: solid 0.2vw rgb(100, 100, 100);
-
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-/* Foto Animada */
-
-@keyframes teste {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.25);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Texto */
-
-#infos_nomes {
-    width: 40vw;
-    height: 35vh;
-
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    border-radius: 2vw;
-
-    background-color: RGB(230, 230, 230);
-}
-
-#nome_sobrenome {
-    width: 30vw;
-
-    margin: 0 5vw;
-
-    display: flex;
-    text-align: center;
-}
-
-#nome_sobrenome h1 {
-    font-size: 7vh;
-    margin: 0 1vw; 
-}
-
-#primeiro_nome{
-    color:  RGB(30, 30, 30)
-}
-
-#segundo_nome{
-    color: rgb(255, 100, 0);
-}
-
-/* Paragrafo */
-
-#infos_nomes p {
-    font-size: 4vh;
-    color: rgb(55, 20, 15);
-}
-
-/* Carro */
-
-#carro {
-    position: absolute;
-    bottom: 4.7vh;
-    width: 5vw;
-    height: 5vh;
-    animation: carro 8s infinite;
-}
-
-/* Carro Animado */
-
-@keyframes carro {
-    0% {
-        left: -5vw;
-    }
-
-    100% {
-        left: 100vw;
-    }
-}
-
-@media screen and (max-width: 480px), (max-height: 882px){
-    section {
-        height: 80vh;
+    /* Aninhamento do Canvas que ocupa o mesmo espaço */
+    & canvas {
         width: 100vw;
-
-        margin-top: 13vh;
-
-        background: linear-gradient(to bottom, RGB(30, 30, 30), rgb(100, 100, 100));
-    
-        align-items: center;
-        align-content: center;
-
-        
-        overflow-x: hidden;
+        height: 81vh;
+        background-color: rgb(5, 5, 5);
+        background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13), transparent),
+                          radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+        margin: 0;
+        z-index: -1;
     }
 
-    #imagem_grande {
-        width: 60vw;
-        height: 20vh;
-        border: solid 0.1vh black;
-    }
-
-    #infos {
-        width: 00vw;
-        height: -20vh;
-
-        margin: 0vw 10vh;
-
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    #infos_nomes {
-        width: 60vw;
-
-        margin-top: 5vh;
-    
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    #nome_sobrenome {
-        width: 30vw;
-    
-        margin: 0 15vw;
-    
-        display: flex;
-        text-align: center;
-    }
-    
-    #nome_sobrenome h1 {
-        font-size: 2vh;
-        margin: 0 1vw; 
-    }
-    
-    #segundo_nome{
-        color: rgb(255, 100, 0);
-    }
-    
-    /* Paragrafo */
-    
-    #infos_nomes p {
-        font-size: 2vh;
-    }
-
-    #carro{
+    /* Bloco de Informações */
+    & #infos {
+        width: 90vw;
+        height: 50vh;
         position: absolute;
-        bottom: 0vh;
-        width: 0vw;
-        height: 0vh;
+        top: 13vh;
+        display: flex;
+        justify-content: space-evenly;
+
+        /* Estilização da Imagem */
+        & #imagem_grande {
+            width: 25vw;
+            height: 25vh;
+            margin-top: 5vh;
+            border-radius: 2vw;
+            border: solid 0.2vw rgb(100, 100, 100);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            animation: teste 8s infinite;
+        }
+
+        /* Bloco de Texto (Nomes e Descrição) */
+        & #infos_nomes {
+            width: 40vw;
+            height: 35vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 2vw;
+            background-color: rgb(230, 230, 230);
+
+            & #nome_sobrenome {
+                width: 30vw;
+                margin: 0 5vw;
+                display: flex;
+                text-align: center;
+
+                & h1 {
+                    font-size: 7vh;
+                    margin: 0 1vw; 
+                }
+            }
+
+            & p {
+                font-size: 4vh;
+                color: rgb(55, 20, 15);
+            }
+        }
+    }
+
+    /* Animação do Carro */
+    & #carro {
+        position: absolute;
+        font-size: 2vw;
+        bottom: 4.7vh;
+        width: 5vw;
+        height: 5vh;
         animation: carro 8s infinite;
     }
 }
 
-canvas {
-    width: 100vw;
-    height: 81vh;
-    background-color: rgb(5, 5, 5);
-    background-image: radial-gradient(circle at top right, rgba(121, 68, 154, 0.13),       transparent),
-      radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
-      margin: 0;
+/* Cores específicas dos nomes */
+#primeiro_nome { color: rgb(30, 30, 30); }
+#segundo_nome { color: rgb(255, 100, 0); }
 
-      z-index: -1;
-  }
-  
+/* Keyframes (Mantidos fora por padrão de legibilidade) */
+@keyframes teste {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+}
+
+@keyframes carro {
+    0% { left: -5vw; }
+    100% { left: 100vw; }
+}
