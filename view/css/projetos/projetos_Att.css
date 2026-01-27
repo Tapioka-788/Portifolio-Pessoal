@@ -1,101 +1,112 @@
-#telaAtt{
+/* Definição de tamanhos globais para textos, ícones e placeholders */
+#telaAtt {
+    --font-size-base: 1vw;
+    /* Ajuste aqui para mudar tudo de uma vez */
+
+    font-size: var(--font-size-base);
     width: 100vw;
     height: 100vh;
-
     position: fixed;
     top: 0;
     right: -100vw;
-
     background-color: rgba(0, 0, 0, 0.5);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     overflow: hidden;
-}
 
-.inputeCOntador{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    /* Aninhando o container de inputs */
+    #inputs_att {
+        width: 27vw;
+        height: 30vh;
+        position: fixed;
+        top: 32.5vh;
+        background-color: white;
+        border-radius: 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5vh 0;
 
-    width: 17vw;
-
-    padding-left: 2vw;
-    p{
-        margin-left: 0.25vw;
+        #tituleAtt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            font-size: 1.4vw;
+            width: 17vw;
+        }
     }
-}
 
-.contadorLimiteN {
-    color: rgb(255, 0, 0);
-}
+    /* Inputs e Placeholders */
+    .PutosAtt {
+        width: 12.5vw;
+        height: 2vh;
+        border-radius: 1vw;
+        padding: 0 1vw;
+        z-index: 2;
+        margin: 0.5vh 0vw;
+        border: solid 0.1vw rgb(128, 128, 128);
+        font-size: var(--font-size-base);
 
-.contadorNormalN {
-    color: rgb(128, 128, 128);
-}
+        &::placeholder {
+            font-size: 1vw;
+            color: #999;
+        }
+    }
 
-.contadorLimiteL {
-    color: rgb(255, 0, 0);
-}
+    /* Container dos contadores */
+    .inputeCOntador {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 17vw;
+        padding-left: 2vw;
+        font-size: var(--font-size-base);
 
-.contadorNormalL {
-    color: rgb(128, 128, 128);
-}
+        p {
+            margin-left: 0.25vw;
+        }
+    }
 
-.PutosAtt{
-    width: 12.5vw;
-    height: 2vh;
-    border-radius: 1vw;
-    padding: 0 1vw;
-    z-index: 2;
+    /* Agrupando estados dos contadores (Removido repetição) */
+    .contadorLimiteN,
+    .contadorLimiteL {
+        color: rgb(255, 0, 0);
+    }
 
-    margin: 0.5vh 0vw;
+    .contadorNormalN,
+    .contadorNormalL {
+        color: rgb(128, 128, 128);
+    }
 
-    border: solid 0.1vw rgb(128, 128, 128);
-}
+    /* Área de Botões */
+    #buttons_telaatt {
+        width: 15vw;
+        display: flex;
+        justify-content: space-evenly;
 
-#tituleAtt{
-    border: none;
-}
+        .attbuts {
+            width: 5vw;
+            height: 4vh;
+            margin-top: 3vh;
+            border-radius: 3vw;
+            border: none;
+            background-color: rgb(255, 100, 0);
+            font-size: var(--font-size-base);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            /* Sem prefixos */
 
-#inputs_att{
-    width: 27vw;
-    height: 30vh;
+            &:hover {
+                transform: scale(1.1);
+            }
 
-    position: fixed;
-    top: 32.5vh;
-
-    background-color: white;
-    border-radius: 2vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    padding: 5vh 0;
-}
-
-#buttons_telaatt{
-    width: 15vw;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.attbuts{
-    width: 5vw;
-    height: 4vh;
-
-    margin-top: 3vh;
-
-    border-radius: 3vw;
-    border: none;
-
-    background-color: rgb(255, 100, 0);
-}
-
-.attbuts:hover{
-    transform: scale(1.1);
+            i {
+                /* Garante que ícones do FontAwesome sigam o tamanho */
+                font-size: var(--font-size-base);
+            }
+        }
+    }
 }

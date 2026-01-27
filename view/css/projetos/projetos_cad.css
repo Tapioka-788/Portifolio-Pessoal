@@ -1,135 +1,113 @@
 #telaCadastro {
+    /* Variável para controle global de texto nesta seção */
+    --font-size-base: 1vw;
+
     width: 100vw;
     height: 100vh;
-
     position: fixed;
     top: 0;
     left: -100vw;
-
     background-color: rgba(0, 0, 0, 0.5);
-
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    font-size: var(--font-size-base);
 
-/* #contador-nome {
-    font-size: 1.2vh;
-    pointer-events: none;
+    /* Container Branco */
+    #inputs_cad {
+        width: 27vw;
+        height: 30vh;
+        position: fixed;
+        top: 32.5vh;
+        background-color: white;
+        border-radius: 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5vh 0;
 
-    margin-top: -2.5vh;
-    margin-right: -12.5vw;
+        #tituleCadd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            font-size: 1.4vw;
+            width: 17vw;
+        }
+    }
 
-    z-index: 99;
-}
+    /* Inputs e Placeholders */
+    .Putos,
+    #nomeAdd,
+    #linguagemAdd {
+        width: 12.5vw;
+        height: 2vh;
+        border-radius: 1vw;
+        padding: 0.5vh 1vw;
+        /* Ajuste leve para centralizar texto */
+        z-index: 2;
+        margin: 0.5vh 0vw;
+        border: solid 0.1vw rgb(128, 128, 128);
+        font-size: var(--font-size-base);
 
-#contador-linguagem{
-    font-size: 1.2vh;
-    pointer-events: none;
+        &::placeholder {
+            font-size: 1vw;
+            color: #888;
+        }
+    }
 
-    margin-top: -2.5vh;
-    margin-right: -12.5vw;
+    /* Estrutura do Contador de Caracteres */
+    .inputeCOntador {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 17vw;
+        padding-left: 2vw;
 
-    z-index: 99;
-} */
+        p {
+            margin-left: 0.25vw;
+            font-size: 1vw;
+        }
+    }
 
-.inputeCOntador{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    /* Agrupamento de cores dos contadores */
+    .contadorLimiteN,
+    .contadorLimiteL {
+        color: rgb(255, 0, 0);
+    }
 
-    width: 17vw;
+    .contadorNormalN,
+    .contadorNormalL {
+        color: rgb(128, 128, 128);
+    }
 
-    padding-left: 2vw;
-    p{
-        margin-left: 0.25vw;
+    /* Botões */
+    #buttons_telaCad {
+        width: 15vw;
+        display: flex;
+        justify-content: space-evenly;
+
+        .cadbuts {
+            width: 5vw;
+            height: 4vh;
+            margin-top: 3vh;
+            border-radius: 3vw;
+            border: none;
+            background-color: rgb(255, 100, 0);
+            font-size: var(--font-size-base);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            /* Sem prefixos */
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            i {
+                /* Para ícones caso adicione futuramente */
+                font-size: var(--font-size-base);
+            }
+        }
     }
 }
-
-.contadorLimiteN {
-    color: rgb(255, 0, 0);
-}
-
-.contadorNormalN {
-    color: rgb(128, 128, 128);
-}
-
-.contadorLimiteL {
-    color: rgb(255, 0, 0);
-}
-
-.contadorNormalL {
-    color: rgb(128, 128, 128);
-}
-
-.Putos {
-    width: 12.5vw;
-    height: 2vh;
-    border-radius: 1vw;
-    padding: 0 1vw;
-    z-index: 2;
-
-    margin: 0.5vh 0vw;
-
-    border: solid 0.1vw rgb(128, 128, 128);
-}
-
-#nomeAdd, #linguagemAdd{
-    width: 12.5vw;
-}
-
-#tituleCadd{
-    border: none;
-}
-
-#inputs_cad {
-    width: 27vw;
-    height: 30vh;
-
-    position: fixed;
-    top: 32.5vh;
-
-    background-color: white;
-    border-radius: 2vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
-    padding: 5vh 0;
-}
-
-#buttons_telaCad {
-    width: 15vw;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.cadbuts {
-    width: 5vw;
-    height: 4vh;
-
-    margin-top: 3vh;
-
-    border-radius: 3vw;
-    border: none;
-
-    background-color: rgb(255, 100, 0);
-}
-
-.cadbuts:hover {
-    transform: scale(1.1);
-}
-
-/* #recado{
-    width: 15vw;
-    height: 5vh;
-    border-radius: 2vw;
-    margin-bottom: -15vh;
-    background-color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */

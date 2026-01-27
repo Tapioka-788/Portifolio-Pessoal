@@ -1,5 +1,8 @@
 /* Configuração Base da Seção */
 section {
+    --font-size-inputs: 1vw;
+    /* Padronização para textos e placeholders */
+
     width: 100vw;
     height: 81vh;
     margin-top: 13vh;
@@ -8,7 +11,6 @@ section {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    /* Substituído "none" por fallback */
     font-size: 0.6vw;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -26,6 +28,16 @@ section {
     }
 }
 
+h1 {
+    width: 20vw;
+    font-size: 1vw;
+}
+
+#feedbackTEXTh1 {
+    width: 7.4vw;
+    font-size: 1vw;
+}
+
 /* Grid de Projetos */
 #pagina {
     width: 70vw;
@@ -40,7 +52,7 @@ section {
         width: 20vw;
         height: 30vh;
         border-radius: 2vw;
-        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 1vw 1vw 1vh 0px rgba(0, 0, 0, 0.75);
         transition: transform 0.2s ease, background-color 0.2s ease;
 
         &:hover {
@@ -65,6 +77,12 @@ section {
             width: 15vw;
             height: 7vh;
             margin-left: 2vw;
+
+            /* Garante que textos informativos sigam o padrão */
+            h3,
+            p {
+                font-size: 1vw;
+            }
         }
 
         & .botaoBox {
@@ -78,10 +96,15 @@ section {
                 width: 10vw;
                 height: 5vh;
                 border-radius: 2vw;
+                border: transparent;
                 background-color: white;
                 font-family: "East Sea Dokdo";
                 font-weight: bold;
-                font-size: 1vw;
+                font-size: 1.2vw;
+                /* Ajustado para melhor leitura */
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 transition: transform 0.2s ease;
 
                 &:hover {
@@ -97,7 +120,7 @@ section {
         border-radius: 1vw;
         border: solid 0.2vw #011126;
         background-color: #ffffff;
-        font-size: 10vw;
+        font-size: 8vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -105,21 +128,32 @@ section {
         &:hover {
             background-color: rgb(242, 186, 87);
         }
+
+        i {
+            font-size: 5vw;
+        }
     }
 }
 
-/* Botões de Ação (Lixeira e Lápis) */
 #lixeira,
 #lapis {
     width: 2vw;
     height: 2vw;
     border-radius: 1vh;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: transform 0.2s ease;
 
     &:hover {
         transform: scale(1.1);
         cursor: pointer;
+    }
+
+    i {
+        font-size: 1.2vw;
+        color: black;
     }
 }
 
@@ -131,17 +165,26 @@ section {
     background-color: rgb(48, 218, 48);
 }
 
-/* Melhoria visual para as Telas de Cadastro/Ajuste (Modais) */
 #telaCadastro,
 #telaAtt,
 #confirm_delete {
-    /* Estilos compartilhados para os overlays */
     position: fixed;
-    /* Recomendado para modais */
     background-color: rgba(0, 0, 0, 0.5);
+
+    & input,
+    & .feedbackInput,
+    & .Putos,
+    & .PutosAtt {
+        font-size: 1vw;
+        box-sizing: border-box;
+
+        &::placeholder {
+            font-size: 1vw;
+            color: #888;
+        }
+    }
 
     & .inputeCOntador {
         position: relative;
-        /* Estilos para os contadores de caracteres dentro das telas */
     }
 }

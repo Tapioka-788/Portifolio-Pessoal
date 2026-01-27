@@ -1,81 +1,80 @@
-#confirm_delete{
-    width: 100vw;
-    height: 81vh;
+#confirm_delete {
+  /* Variáveis de padronização */
+  --font-size-base: 1vw;
+  --input-height: 4vh;
 
-    margin: 0vh; 
+  width: 100vw;
+  height: 81vh;
+  position: fixed;
+  top: 13vh;
+  left: -100vw;
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 0.2), rgba(100, 100, 100, 0.2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
 
-    position: fixed;
-    top: 13vh;
-    left: -100vw;
-
-    background: linear-gradient(to bottom, RGBa(30, 30, 30, 0.2), rgba(100, 100, 100, 0.2));
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: all 0.2s ease-in-out;
-}
-
-.smallScreen {
+  .smallScreen {
     width: 25vw;
     height: 20vh;
-
     background-color: white;
     border-radius: 2vw;
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
     text-align: center;
-
     padding: 5vh 1vw;
-
     color: #333333;
-    font-size: 1vw;
-}
 
-#txtConfirm{
-    margin: 0vh;
-    font-size: 2vh;
-}
+    #txtConfirm {
+      margin: 0;
+      font-size: 2vh;
+    }
 
-#avisinho{
-    margin: 0vh;
-    font-size: 1vh;
-}
+    #avisinho {
+      margin: 0;
+      font-size: 1.2vh; /* Aumentei levemente para legibilidade */
+    }
 
-.btns_confirm{
-    width: 25vw;
-    height: 5vh;
+    .btns_confirm {
+      width: 25vw;
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
+      .btn_confirm {
+        width: 6vw;
+        height: var(--input-height);
+        margin-top: 3vh;
+        border-radius: 3vw;
+        border: none;
+        padding: 0 1vh;
+        background-color: rgb(255, 200, 150);
+        
+        /* Padronização de Texto e Placeholder */
+        font-size: var(--font-size-base);
+        font-family: sans-serif;
+        box-sizing: border-box;
 
-.btn_confirm{
-    width: 6vw;
-    height: 4vh;
+        &::placeholder {
+          font-size: var(--font-size-base);
+          color: #666;
+        }
 
-    margin-top: 3vh;
+        &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
 
-    border-radius: 3vw;
-    border: none;
-
-    padding-left: 1vh;
-
-    background-color: RGB(255, 200, 150);
-}
-
-.btn_confirm:hover{
-    transform: scale(1.1);
-}
-
-#btn_nao:hover{
-    background-color: rgb(255, 50, 50);
+        /* Botão específico de cancelar */
+        &#btn_nao:hover {
+          background-color: rgb(255, 50, 50);
+          color: white;
+        }
+      }
+    }
+  }
 }

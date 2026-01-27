@@ -1,148 +1,123 @@
-#feedback_sect{
-    width: 100vw;
-    height: 81vh;
+#feedback_sect {
+  /* Variáveis para consistência */
+  --font-size-inputs: 1vw;
+  --input-height: 4vh;
 
-    z-index: 7;
+  width: 100vw;
+  height: 81vh;
+  z-index: 7;
+  margin-top: 13vh;
+  position: absolute;
+  top: 0vh;
+  left: 100vw;
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 0.6), rgba(100, 100, 100, 0.6));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  font-family: 'Times New Roman', Times, serif;
 
-    margin-top: 13vh;
+  font-size: 1vw;
 
-    position: absolute;
-    top: 0vh;
-    left: 100vw;
-
-    background: linear-gradient(to bottom, RGBa(30, 30, 30, 0.6), rgba(100, 100, 100, 0.6));
-    /* background: rgba(200, 200, 200, 0.4); */
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    overflow-y: scroll;
-
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#caixa_feed{
+  /* Container da Caixa de Feedback */
+  #caixa_feed, .caixaRespostaFeed {
     width: 25vw;
     height: 25vh;
-
     margin: 5vh 4.75vw 1vh;
-
     padding: 1vh;
-
     border-radius: 1vw;
-
     background-color: rgb(255, 255, 255);
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-}
-/* 
-#feedTexto{
-    font-family: 'Times New Roman', Times, serif;
-} */
+  }
 
-.inputeCOntador{
+  /* Ajuste específico para a resposta */
+  .caixaRespostaFeed {
+    margin: 2vh 0vh;
+
+    .textoRespostaFeed {
+      width: 20vw;
+      height: 3vh;
+      text-align: center;
+      font-size: 1vw;
+    }
+
+    .descricaoFeedResposta {
+      width: 20vw;
+      height: 12vh;
+      font-size: 1vw;
+    }
+  }
+
+  /* Inputs e Placeholders */
+  .feedbackInput {
+    width: 18vw;
+    height: var(--input-height);
+    margin-bottom: 2vh;
+    padding: 0 1vh;
+    border-radius: 1vw;
+    border: solid 0.1vh rgb(100, 100, 100);
+    box-sizing: border-box; /* Evita quebra de largura com padding */
+    font-size: var(--font-size-inputs);
+    font-family: sans-serif;
+
+    &::placeholder {
+      font-size: var(--font-size-inputs);
+      color: #777;
+    }
+
+    &:hover {
+      cursor: text;
+      transform: scale(1.01);
+    }
+  }
+
+  /* Contadores de Caracteres */
+  .inputeCOntador {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    p{
-        color: rgb(128, 128, 128);
 
-        font-size: 1vh;
-
-        margin-top: -0.75vh;
-        margin-left: 0.25vw;
-
-        cursor: none;
+    p {
+      font-size: 1vh;
+      margin-top: -0.75vh;
+      margin-left: 0.25vw;
+      cursor: default;
     }
-}
 
+    /* Agrupamento de estados do contador */
+    .contadorLimiteN, .contadorLimiteL {
+      color: rgb(255, 0, 0);
+    }
 
-.contadorLimiteN {
-    color: rgb(255, 0, 0);
-}
+    .contadorNormalN, .contadorNormalL {
+      color: rgb(128, 128, 128);
+    }
+  }
 
-.contadorNormalN {
-    color: rgb(128, 128, 128);
-}
-
-.contadorLimiteL {
-    color: rgb(255, 0, 0);
-}
-
-.contadorNormalL {
-    color: rgb(128, 128, 128);
-}
-
-
-.feedbackInput{
-    width: 18vw;
-    height: 3vh;
-
-    margin-bottom: 2vh;
-
-    padding: 0vh 1vh;
-
-    border-radius: 1vw;
-    border: solid 0.1vh RGB(100, 100, 100);
-}
-
-.feedbackInput:hover{
-    cursor: text;
-    transform: scale(1.01);
-}
-
-#buttonContainer{
+  /* Container de Botões */
+  #buttonContainer {
     width: 25vw;
-
     display: flex;
     justify-content: space-evenly;
-    .feedButton{
-        width: 5vw;
-        height: 4vh;
-    
-        border-radius: 3vw;
-        border: none;
-    
-        background-color: rgb(255, 100, 0);
-    };
-}
 
-.feedButton:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-}
+    .feedButton {
+      width: 5vw;
+      height: 4vh;
+      border-radius: 3vw;
+      border: none;
+      background-color: rgb(255, 100, 0);
+      font-size: 1vw;
+      color: white;
+      transition: transform 0.2s ease;
+      cursor: pointer;
 
-.caixaRespostaFeed{
-    width: 25vw;
-    height: 25vh;
-
-    margin: 2vh 0vh;
-
-    padding: 1vh;
-
-    border-radius: 1vw;
-
-    background-color: rgb(255, 255, 255);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.textoRespostaFeed{
-    width: 20vw;
-    height: 3vh;
-
-    text-align: center;
-}
-
-.descricaoFeedResposta{
-    width: 20vw;
-    height: 12vh;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
 }
